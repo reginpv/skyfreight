@@ -1,9 +1,15 @@
-import TemplateDefault from "@/components/templates/Default";
+import TemplateDefault from "@/components/templates/Default"
 
 export default function Home() {
   return (
     <TemplateDefault>
-      Main Page
+      <section>
+        <div className="container container--custom">
+          <div>
+            Main Page
+          </div>
+        </div>
+      </section>
     </TemplateDefault>
   );
 }

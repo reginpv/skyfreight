@@ -13,6 +13,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer components {
+  .container {
+    .container--custom {
+      @apply px-5 max-w-screen-xl;
+    }
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

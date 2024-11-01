@@ -1,8 +1,8 @@
-// babel.config.js
 module.exports = {
+  presets: ["@babel/preset-typescript"],
   env: {
     production: {
-      plugins: ["transform-remove-console"],
+      plugins: ["@babel/plugin-transform-remove-console"],
     },
   },
 };
