@@ -15,7 +15,7 @@ body {
 
 @layer components {
   .container {
-    .container--custom {
+    &--custom {
       @apply px-5 max-w-screen-xl;
     }
   }
