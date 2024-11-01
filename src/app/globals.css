@@ -14,6 +14,16 @@ body {
   @apply min-h-[100dvh] flex flex-col;
 }
 
+@layer base {
+  header {
+    @apply py-5;
+  }
+
+  footer {
+    @apply py-5;
+  }
+}
+
 @layer components {
   .container {
     &--custom {
