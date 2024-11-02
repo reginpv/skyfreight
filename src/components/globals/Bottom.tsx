@@ -1,6 +1,6 @@
 import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE } from "@/config/constants"
 import Link from "next/link"
-import { IconEmail, IconPin, IconTelephone } from "@/components/ui/Icons"
+import { IconEmail, IconPin, IconRight, IconTelephone } from "@/components/ui/Icons"
 import menujson from "@/data/menu.json"
 import FormNewsletter from "@/components/forms/FormNewsletter"
 
@@ -59,7 +59,9 @@ export default function Bottom() {
                 menujson.map((item, i)=>(
                   <li key={i}>
                     <Link href={item.slug} className="flex gap-3">
-                      <span>&gt;</span>
+                      <span>
+                        <IconRight className="fill-secondary" />
+                      </span>
                       <span>{item.label}</span>
                     </Link>
                   </li>
