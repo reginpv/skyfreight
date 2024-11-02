@@ -1,6 +1,7 @@
 import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE } from "@/config/constants"
 import Link from "next/link"
 import menujson from "@/data/menu.json"
+import FormNewsletter from "@/components/forms/FormNewsletter"
 
 export default function Bottom() {
   return (
@@ -67,7 +68,9 @@ export default function Bottom() {
             {/** Component Newsletter */}
             <div className="flex flex-col gap-5">
               <div className="text-[20px]">Sign up for our newsletter</div>
-              <div>Form</div>
+              <div>
+                <FormNewsletter />
+              </div>
             </div>
 
             {/**  */}
