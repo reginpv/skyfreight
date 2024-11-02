@@ -1,5 +1,6 @@
 import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE } from "@/config/constants"
 import Link from "next/link"
+import { IconEmail, IconPin, IconTelephone } from "@/components/ui/Icons"
 import menujson from "@/data/menu.json"
 import FormNewsletter from "@/components/forms/FormNewsletter"
 
@@ -15,14 +16,18 @@ export default function Bottom() {
             <div>
               <ul className="ml-5 pl-5 border-l-[5px] border-l-secondary flex flex-col gap-5">
                 <li className="flex gap-5">
-                  <div>Icon</div>
+                  <div>
+                    <IconPin className="fill-white mt-1" />
+                  </div>
                   <div>
                     <div className="text-lg uppercase text-secondary">Address</div>
                     <div className="text-sm">{ PUBLIC_ADDRESS }</div>
                   </div>
                 </li>
                 <li className="flex gap-5">
-                  <div>Icon</div>
+                  <div>
+                    <IconTelephone className="fill-white mt-1" />
+                  </div>
                   <div>
                     <div className="text-lg uppercase text-secondary">Phone</div>
                     <div className="text-sm">
@@ -31,7 +36,9 @@ export default function Bottom() {
                   </div>
                 </li>
                 <li className="flex gap-5">
-                  <div>Icon</div>
+                  <div>
+                    <IconEmail className="fill-white mt-1" />
+                  </div>
                   <div>
                     <div className="text-lg uppercase text-secondary">Email</div>
                     <div className="text-sm">
