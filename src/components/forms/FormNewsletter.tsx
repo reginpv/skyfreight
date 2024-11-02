@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { isValidEmail } from "@/lib/helper"
-import { ADMIN_EMAIL } from "@/config/constants"
 
 export default function FormNewsletter():JSX.Element {
 
@@ -15,65 +13,7 @@ export default function FormNewsletter():JSX.Element {
 
     e.preventDefault()
 
-    const { email } = stateFields
-    const message = document.querySelector('[data-message="newsletter"]')
-
-    setStateSending(true)
-
-    // Reset
-    message?.classList.add('hidden')
-
-    // Validate
-    if(!isValidEmail(email)) {
-      if(message) {
-        message.classList.add('bg-red-100')
-        message.classList.remove('hidden')
-        message.innerHTML = `<strong class="underline">${stateFields.email}</strong> is invalid.`
-      }
-      setStateSending(false)
-      return
-    }
-
-    const headers:any = {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(stateFields) 
-    }
-
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASEURL}/mailchimp`, headers)
-    const data = await res.json()
-
-    if(data.error_count > 0) {
-
-      if(message) {
-        message.classList.add('bg-red-100')
-        message.classList.remove('hidden')
-        message.innerHTML = `<strong>Oops</strong>: An error occured please contact us at: ${ADMIN_EMAIL}.`
-      }
-    
-      setStateSending(false)
-
-      return
-
-    } else {
-
-      // Email confirm
-      const resEmail = await fetch(`${process.env.NEXT_PUBLIC_API_BASEURL}/mail/newsletter`, headers)
-      const dataEmail = await resEmail.json()
-      //console.log(`Data email: `, dataEmail)
-      
-      // Success
-      if(message) {
-        message.classList.add('bg-green-100')
-        message.classList.remove('hidden')
-        message.innerHTML = `<strong>Success!</strong>: Your email ${stateFields.email} is now subscribed!`
-      }
-
-      setStateSending(false)
-      setStateFields({email:''})
-      
-    }
-
+    setStateSending(false)
 
   }
 
