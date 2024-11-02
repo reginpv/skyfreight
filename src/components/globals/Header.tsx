@@ -3,7 +3,7 @@ import Logo from "@/components/ui/Logo"
 export default function Header() {
   return (
     <header>
-      <div className="header__container container container--custom">
+      <div className="header__container px-5">
         <div className="header__content flex justify-between gap-5 items-center">
           <div>
             <Logo />

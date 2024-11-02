@@ -11,6 +11,9 @@ const config: Config = {
     extract
   },
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
         primary: "#044B99",
@@ -20,7 +23,8 @@ const config: Config = {
     },
   },
   plugins: [
-    fluid
+    fluid,
+    
   ],
 };
 export default config;
