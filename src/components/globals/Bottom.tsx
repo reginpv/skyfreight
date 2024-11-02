@@ -1,4 +1,6 @@
+import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE } from "@/config/constants"
 import Link from "next/link"
+import menujson from "@/data/menu.json"
 
 export default function Bottom() {
   return (
@@ -7,9 +9,37 @@ export default function Bottom() {
         <div className="bottom__content flex flex-col md:flex-row ~gap-[20px]/[40px]">
 
           {/** Col 1 */}
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col gap-5">
             <div>Full logo</div>
-
+            <div>
+              <ul className="ml-5 pl-5 border-l-[5px] border-l-secondary flex flex-col gap-5">
+                <li className="flex gap-5">
+                  <div>Icon</div>
+                  <div>
+                    <div className="text-lg uppercase text-secondary">Address</div>
+                    <div className="text-sm">{ PUBLIC_ADDRESS }</div>
+                  </div>
+                </li>
+                <li className="flex gap-5">
+                  <div>Icon</div>
+                  <div>
+                    <div className="text-lg uppercase text-secondary">Phone</div>
+                    <div className="text-sm">
+                      <a href={`tel:${PUBLIC_TELEPHONE}`}>{ PUBLIC_TELEPHONE }</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="flex gap-5">
+                  <div>Icon</div>
+                  <div>
+                    <div className="text-lg uppercase text-secondary">Email</div>
+                    <div className="text-sm">
+                      <a href={`mailto:${PUBLIC_EMAIL}`}>{ PUBLIC_EMAIL }</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/** Col 2 */}
@@ -17,26 +47,16 @@ export default function Bottom() {
 
             <div className="text-[20px]">Useful links</div>
             <ul className="flex flex-col gap-5">
-              <li>
-                <Link href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/tracking">
-                  Tracking
-                </Link>
-              </li>
-              <li>
-                <Link href="/boc-forms">
-                  BOC forms
-                </Link>
-              </li>
-              <li>
-                <Link href="/account">
-                  Account
-                </Link>
-              </li>
+              {
+                menujson.map((item, i)=>(
+                  <li key={i}>
+                    <Link href={item.slug} className="flex gap-3">
+                      <span>&gt;</span>
+                      <span>{item.label}</span>
+                    </Link>
+                  </li>
+                ))
+              }
             </ul>
 
           </div>
