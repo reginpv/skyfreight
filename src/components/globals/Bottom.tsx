@@ -1,6 +1,6 @@
 import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE_OMAN, PUBLIC_TELEPHONE_PH } from "@/config/constants"
 import Link from "next/link"
-import { IconEmail, IconPin, IconRight, IconTelephone } from "@/components/ui/Icons"
+import { Icon } from "@/components/ui/Icons"
 import menujson from "@/data/menu.json"
 import FormNewsletter from "@/components/forms/FormNewsletter"
 
@@ -17,7 +17,7 @@ export default function Bottom() {
               <ul className=" flex flex-col gap-5">
                 <li className="flex gap-5">
                   <div>
-                    <IconPin className="fill-white mt-1" />
+                    <Icon icon="pin" className="fill-white mt-1" />
                   </div>
                   <div>
                     <div className="text-lg uppercase text-secondary">Address</div>
@@ -26,7 +26,7 @@ export default function Bottom() {
                 </li>
                 <li className="flex gap-5">
                   <div>
-                    <IconTelephone className="fill-white mt-1" />
+                    <Icon icon="telephone" className="fill-white mt-1" />
                   </div>
                   <div>
                     <div className="text-lg uppercase text-secondary">Phone</div>
@@ -52,7 +52,7 @@ export default function Bottom() {
                 </li>
                 <li className="flex gap-5">
                   <div>
-                    <IconEmail className="fill-white mt-1" />
+                    <Icon icon="email" className="fill-white mt-1" />
                   </div>
                   <div>
                     <div className="text-lg uppercase text-secondary">Email</div>
@@ -75,7 +75,7 @@ export default function Bottom() {
                   <li key={i}>
                     <Link href={item.slug} className="flex gap-3">
                       <span>
-                        <IconRight className="fill-secondary" />
+                        <Icon icon="arrowRight" className="fill-secondary" />
                       </span>
                       <span>{item.label}</span>
                     </Link>
@@ -87,7 +87,7 @@ export default function Bottom() {
           </div>
 
           {/** Col 3 */}
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col gap-8">
 
             {/** Component Newsletter */}
             <div className="flex flex-col gap-5">
@@ -99,6 +99,30 @@ export default function Bottom() {
 
             {/**  */}
             <div>
+
+              <div className="rounded-2xl overflow-hidden border-2 border-secondary flex flex-col gap-5">
+                <div className="bg-secondary p-3 text-center uppercase">Follow us</div>
+                <div className="">
+                  <ul className="flex justify-center items-center ~gap-[20px]/[40px]">
+                    <li>
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        <Icon icon="facebook" height={40} width={40} className="fill-secondary" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        <Icon icon="whatsapp" height={40} width={40} className="fill-secondary" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        <Icon icon="tiktok" height={40} width={40} className="fill-secondary" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="p-3 text-center font-semibold">@SkyFreightOman</div>
+              </div>
 
             </div>
             
