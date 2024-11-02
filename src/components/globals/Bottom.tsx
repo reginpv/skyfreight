@@ -14,7 +14,7 @@ export default function Bottom() {
           <div className="flex-1 flex flex-col gap-5">
             <div>Full logo</div>
             <div>
-              <ul className="ml-5 pl-5 border-l-[5px] border-l-secondary flex flex-col gap-5">
+              <ul className=" flex flex-col gap-5">
                 <li className="flex gap-5">
                   <div>
                     <IconPin className="fill-white mt-1" />

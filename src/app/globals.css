@@ -2,26 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./styles/base";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
 body {
-  color: var(--foreground);
+  color: "#333333";
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   @apply min-h-[100dvh] flex flex-col;
-}
-
-@layer base {
-  header {
-    @apply py-5;
-  }
-
-  footer {
-    @apply py-5;
-  }
 }
 
 @layer components {

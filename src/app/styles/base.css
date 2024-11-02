@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  header {
+    @apply py-5;
+  }
+
+  footer {
+    @apply py-5;
+  }
+
+  form {
+    @apply text-body;
+    input,
+    textarea,
+    select {
+      @apply p-2 w-full ring-0 outline-none;
+    }
+  }
+}
