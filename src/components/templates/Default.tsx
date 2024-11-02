@@ -1,5 +1,5 @@
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
+import Header from "@/components/globals/Header"
+import Footer from "@/components/globals/Footer"
 
 export default function TemplateDefault({ children }: Props) {
   
