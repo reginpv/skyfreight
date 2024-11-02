@@ -9,14 +9,14 @@ export default function Bottom() {
           {/** Col 1 */}
           <div className="flex-1">
             <div>Full logo</div>
-            
+
           </div>
 
           {/** Col 2 */}
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col gap-5">
 
-            <div>Useful links</div>
-            <ul>
+            <div className="text-[20px]">Useful links</div>
+            <ul className="flex flex-col gap-5">
               <li>
                 <Link href="/">
                   Home
@@ -45,8 +45,8 @@ export default function Bottom() {
           <div className="flex-1">
 
             {/** Component Newsletter */}
-            <div>
-              <div>Sign up for our newsletter</div>
+            <div className="flex flex-col gap-5">
+              <div className="text-[20px]">Sign up for our newsletter</div>
               <div>Form</div>
             </div>
 
