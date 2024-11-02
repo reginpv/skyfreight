@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Home",
+    "slug": "/"
+  },
+  {
+    "label": "Tracking",
+    "slug": "/tracking"
+  },
+  {
+    "label": "BOC Forms",
+    "slug": "/boc-forms"
+  },
+  {
+    "label": "Account",
+    "slug": "/account"
+  },
+  {
+    "label": "Cart",
+    "slug": "/cart"
+  }
+]
