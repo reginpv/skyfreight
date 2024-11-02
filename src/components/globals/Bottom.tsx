@@ -1,4 +1,4 @@
-import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE } from "@/config/constants"
+import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE_OMAN, PUBLIC_TELEPHONE_PH } from "@/config/constants"
 import Link from "next/link"
 import { IconEmail, IconPin, IconRight, IconTelephone } from "@/components/ui/Icons"
 import menujson from "@/data/menu.json"
@@ -31,7 +31,22 @@ export default function Bottom() {
                   <div>
                     <div className="text-lg uppercase text-secondary">Phone</div>
                     <div className="text-sm">
-                      <a href={`tel:${PUBLIC_TELEPHONE}`}>{ PUBLIC_TELEPHONE }</a>
+                      <ul className="flex flex-col gap-1">
+                        {
+                          PUBLIC_TELEPHONE_OMAN.map((item, i)=>(
+                            <li key={i}>
+                              <a href={`tel:${item}`}>{ item } <small className="opacity-30">(Oman)</small></a>
+                            </li>
+                          ))
+                        }
+                        {
+                          PUBLIC_TELEPHONE_PH.map((item, i)=>(
+                            <li key={i}>
+                              <a href={`tel:${item}`}>{ item } <small className="opacity-30">(PH)</small></a>
+                            </li>
+                          ))
+                        }
+                      </ul>
                     </div>
                   </div>
                 </li>
