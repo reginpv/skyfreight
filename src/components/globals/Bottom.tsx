@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Icon } from "@/components/ui/Icons"
 import menujson from "@/data/menu.json"
 import FormNewsletter from "@/components/forms/FormNewsletter"
+import LogoFull from "@/components/ui/LogoFull"
 
 export default function Bottom() {
   return (
@@ -12,7 +13,9 @@ export default function Bottom() {
 
           {/** Col 1 */}
           <div className="flex-1 flex flex-col gap-5">
-            <div>Full logo</div>
+            <div>
+              <LogoFull />
+            </div>
             <div>
               <ul className=" flex flex-col gap-5">
                 <li className="flex gap-5">
