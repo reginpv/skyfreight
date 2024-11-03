@@ -14,7 +14,7 @@ export default function Bottom() {
           {/** Col 1 */}
           <div className="flex-1 flex flex-col gap-5">
             <div>
-              <LogoFull />
+              <LogoFull size="md" />
             </div>
             <div>
               <ul className=" flex flex-col gap-5">

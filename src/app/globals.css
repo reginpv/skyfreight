@@ -9,6 +9,10 @@
   --foreground: #171717;
 }
 
+/* * {
+  outline: 1px red solid;
+} */
+
 body {
   color: "#333333";
   background: var(--background);
@@ -25,6 +29,16 @@ body {
 }
 
 @layer utilities {
+  .animated {
+    @apply transition-all ease-in-out duration-300;
+  }
+  
+  .clippy {
+    &--top {
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    }
+  }
+
   .text-balance {
     text-wrap: balance;
   }

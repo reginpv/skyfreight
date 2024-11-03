@@ -1,16 +1,22 @@
 import Nav from "@/components/globals/Nav"
-import Logo from "@/components/ui/Logo"
+import LogoFull from "@/components/ui/LogoFull"
 export default function Header() {
   return (
-    <header>
-      <div className="header__container px-5">
+    <header className="animated">
+      <div className="header__container">
         <div className="header__content flex justify-between gap-5 items-center">
-          <div>
-            <Logo />
+
+          {/** Left */}
+          <div className="py-2 px-5 relative flex items-center">
+            <div className="bg-primary px-5 flex max-h-[60px] clippy clippy--top overflow-visible absolute left-0 w-[310px] -z-10 h-[60px] top-1/2 -translate-y-1/2 shadow-lg"></div>
+            <LogoFull />
           </div>
-          <div>
+
+          {/** Right */}
+          <div className="hidden md:flex px-5">
             <Nav />
           </div>
+
         </div>
       </div>
     </header>
