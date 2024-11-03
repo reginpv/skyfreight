@@ -21,9 +21,9 @@ export default function FormNewsletter():JSX.Element {
     <form onSubmit={handleSubmit}>
       <div data-message="newsletter" className="mb-2 hidden py-2 px-3 text-left"></div>
       <div className="flex">
-        <input type="text" name="email" value={stateFields.email} onChange={e=>setStateFields({...stateFields, email: e.target.value})} className="input" placeholder="Email" />
-        <button className={`bg-[#ccc] px-2 w-full hover:bg-[#ddd] transition-all ease-in-out duration-200 max-w-[80px] md:max-w-[100px] ${stateSending ? `animate-pulse`: ``}`} disabled={stateSending}>
-          {stateSending ? `Sending...` : `Send`}
+        <input type="text" name="email" value={stateFields.email} onChange={e=>setStateFields({...stateFields, email: e.target.value})} className="input rounded-l-xl" placeholder="Email" />
+        <button className={`button button--secondary rounded-r-xl ${stateSending ? `animate-pulse`: ``}`} disabled={stateSending}>
+          {stateSending ? `Sending...` : `Subscribe`}
         </button>
       </div>
     </form>
