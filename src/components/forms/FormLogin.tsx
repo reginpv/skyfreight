@@ -16,7 +16,7 @@ export default function FormLogin() {
   const [error, setError] = useState("")
 
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams?.get("callbackUrl") || "/";
+  const callbackUrl = searchParams?.get("callbackUrl") || "/"
 
   const onSubmit = async (e: React.FormEvent) => {
 
@@ -42,9 +42,15 @@ export default function FormLogin() {
       } else {
         setError("Invalid email or password")
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       setLoading(false)
-      setError(error)
+      
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("An unknown error occurred");
+      }
+      
     }
   }
 

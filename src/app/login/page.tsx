@@ -1,6 +1,6 @@
 import TemplateBlank from "@/components/templates/Blank"
 import Logo from "@/components/ui/Logo"
-import FormLogin from "@/components/forms/FormLogin";
+import FormLogin from "@/components/forms/FormLogin"
 
 export default function Login() {
   return (
