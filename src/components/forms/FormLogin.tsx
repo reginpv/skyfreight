@@ -2,9 +2,9 @@
 
 import { signIn } from "next-auth/react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent, useState, Suspense } from "react"
 
-export default function FormLogin() {
+function FormLoginContent() {
 
   const router = useRouter()
 
@@ -50,7 +50,7 @@ export default function FormLogin() {
       } else {
         setError("An unknown error occurred");
       }
-      
+
     }
   }
 
@@ -97,5 +97,13 @@ export default function FormLogin() {
       </div>
       
     </form>
+  )
+}
+
+export default function FormLogin() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <FormLoginContent />
+    </Suspense>
   )
 }
