@@ -48,7 +48,7 @@ function FormLoginContent() {
       if (error instanceof Error) {
         setError(error.message);
       } else {
-        setError("An unknown error occurred");
+        setError("An unknown error occurred")
       }
 
     }

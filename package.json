@@ -6,12 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db-generate": "dotenv -e .env.local -- npx prisma generate",
+    "db-push": "dotenv -e .env.local -- npx prisma db push",
+    "studio": "dotenv -e .env.local -- npx prisma studio"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^16.4.5",
     "next": "^14.2.15",
     "next-auth": "^4.24.10",
+    "prisma": "^5.22.0",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -21,6 +27,7 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "dotenv-cli": "^7.4.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "fluid-tailwind": "^1.0.3",
