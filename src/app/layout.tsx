@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "SKy Freight Oman",
+  title: "Sky Freight Oman",
   description: "SKy Freight Oman app",
 };
 

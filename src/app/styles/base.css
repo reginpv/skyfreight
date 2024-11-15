@@ -16,7 +16,7 @@
     input,
     textarea,
     select {
-      @apply p-3 w-full ring-0 outline-none;
+      @apply p-3 w-full ring-0 outline-none border;
     }
   }
 }
