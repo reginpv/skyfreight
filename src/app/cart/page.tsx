@@ -1,6 +1,6 @@
 import TemplateDefault from "@/components/templates/Default"
 
-export default function Home() {
+export default function Cart() {
   return (
     <TemplateDefault>
       <section>
