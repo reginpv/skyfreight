@@ -5,3 +5,7 @@ export const PUBLIC_EMAIL = "info@skyfreightoman.com"
 export const PUBLIC_ADDRESS = "Wadi Adai Hillat As sadd St Opposite Al Nahdha Hospital Muscat OM, 112, Oman"
 
 export const ADMIN_EMAIL = "skyfreightoman@gmail.com"
+
+// Utils
+export const MAX_FILE_SIZE_UPLOAD = 10 * 1024 * 1024; // 5 MB
+export const MAX_LOGO_SIZE_UPLOAD = 500 * 1024; // 100 KB
