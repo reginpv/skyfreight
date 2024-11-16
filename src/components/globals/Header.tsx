@@ -1,7 +1,14 @@
+import Link from "next/link"
+import { getServerSession, Session } from "next-auth"
+import { authOptions } from "@/lib/authOptions"
 import Nav from "@/components/globals/Nav"
 import LogoFull from "@/components/ui/LogoFull"
-import Link from "next/link"
-export default function Header() {
+import { ButtonSignOut } from "@/components/ui/ButtonsAuth"
+
+export default async function Header() {
+
+  const session = await getServerSession(authOptions) as Session | null
+
   return (
     <header className="animated">
       <div className="header__container">
@@ -17,10 +24,14 @@ export default function Header() {
           <div className="hidden md:flex px-5 gap-7 items-center">
             <Nav />
 
-            <div className="flex gap-5 items-center">
-              <Link href="/login" className="button button--primary">Login</Link>
-              <Link href="/signup" className="button button--primary">Signup</Link>
-            </div>
+            {
+              session ?
+                <ButtonSignOut /> :
+                <div className="flex gap-5 items-center">
+                  <Link href="/login" className="button button--primary">Login</Link>
+                  <Link href="/signup" className="button button--primary">Signup</Link>
+                </div>
+            }
 
           </div>
 
