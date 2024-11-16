@@ -106,7 +106,7 @@ export const authOptions: NextAuthOptions = {
           if(newUser) {
 
             const { email, name } = newUser
-            const data = {email, name }
+            // const data = {email, name }
 
             // Start
             try {
@@ -146,8 +146,8 @@ export const authOptions: NextAuthOptions = {
                 console.log(err) 
               }
           
-            } catch (error) {
-          
+            } catch (err) {
+              console.log(err) 
             }
 
           }

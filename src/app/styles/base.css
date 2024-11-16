@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+
+  body {
+    @apply text-["#555555"];
+  }
+
   header {
     @apply md:py-5;
   }

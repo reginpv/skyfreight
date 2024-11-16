@@ -1,6 +1,7 @@
 import TemplateBlank from "@/components/templates/Blank"
 import Logo from "@/components/ui/Logo"
 import FormLogin from "@/components/forms/FormLogin"
+import ButtonGoogle from "@/components/ButtonGoogle"
 
 export default function Login() {
   return (
@@ -18,7 +19,11 @@ export default function Login() {
                 <div className="flex justify-center uppercase font-bold">
                   <h2>Login</h2>
                 </div>
-                <div>
+                <div className="flex flex-col gap-3">
+                  <ButtonGoogle />
+                  <div className="text-center text-divider">
+                    <span>or</span>
+                  </div>
                   <FormLogin />
                 </div>
               </div>
@@ -35,5 +40,5 @@ export default function Login() {
 
       </section>
     </TemplateBlank>
-  );
+  )
 }
