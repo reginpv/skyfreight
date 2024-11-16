@@ -12,7 +12,7 @@ export default async function Home() {
         <div className="container container--custom">
           <div>
             <div>{JSON.stringify(session)}</div>
-            Main Page
+            <div>Home</div>
           </div>
         </div>
       </section>
