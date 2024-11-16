@@ -1,6 +1,6 @@
 import TemplateDefault from "@/components/templates/Default"
 
-export default function Home() {
+export default function Account() {
   return (
     <TemplateDefault>
       <section>
