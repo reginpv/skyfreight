@@ -3,7 +3,7 @@ import Logo from "@/components/ui/Logo"
 import FormLogin from "@/components/forms/FormLogin"
 import ButtonGoogle from "@/components/ButtonGoogle"
 
-export default function Login() {
+export default function Signup() {
   return (
     <TemplateBlank>
       <section className="h-dvh">
