@@ -6,6 +6,7 @@ import { signIn } from 'next-auth/react'
 export default function ButtonGoogle() {
   return (
     <button
+      
       onClick={() => signIn("google")}
       className="button font-semibold py-2 border flex items-center gap-2 justify-center"
     >
