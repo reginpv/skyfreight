@@ -2,8 +2,17 @@ import TemplateBlank from "@/components/templates/Blank"
 import Logo from "@/components/ui/Logo"
 import FormLogin from "@/components/forms/FormLogin"
 import ButtonGoogle from "@/components/ButtonGoogle"
+import { getServerSession, Session } from "next-auth"
+import { authOptions } from "@/lib/authOptions"
+import { redirect } from 'next/navigation'
 
-export default function Login() {
+export default async function Login() {
+
+  const session = await getServerSession(authOptions) as Session | null
+  if(session) {
+    redirect('/')
+  }
+
   return (
     <TemplateBlank>
       <section className="h-dvh">

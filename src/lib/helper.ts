@@ -193,16 +193,28 @@ export function extractLatLongFromURL(url:string) {
 
 /**
  * 
- * @param id 
+ * @param role
  * @returns 
  */
-export function isAdmin(id:number) {
+export function isAdmin(role:number) {
 
-  // reginpv@gmail.com = 1
-  // qrcodeph@gmail.com = 
-  const admins = [1, 39]
+  const admins = [9]
 
-  return admins.includes(id)
+  return admins.includes(role)
+
+}
+
+/**
+ * 
+ */
+export function isSuperadmin(email:string) {
+
+  const superadmins = [
+    'reginpv@gmail.com',
+    'jayskyfreight@gmail.com'
+  ]
+
+  return superadmins.includes(email)
 
 }
 
