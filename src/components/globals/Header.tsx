@@ -22,7 +22,7 @@ export default async function Header() {
 
           {/** Right */}
           <div className="hidden md:flex px-5 gap-7 items-center">
-            
+            <Nav />
 
             {
               session ?
