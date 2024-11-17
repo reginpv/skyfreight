@@ -16,14 +16,7 @@
 } */
 
 body {
-  color: "#333333";
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  @apply min-h-[100dvh] flex flex-col;
-}
-
-body {
-  @apply text-["#555555"];
+  @apply text-body min-h-[100dvh] flex flex-col;
 }
 
 header {

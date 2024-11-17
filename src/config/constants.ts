@@ -6,6 +6,9 @@ export const PUBLIC_ADDRESS = "Wadi Adai Hillat As sadd St Opposite Al Nahdha Ho
 
 export const ADMIN_EMAIL = "skyfreightoman@gmail.com"
 
+export const EMAIL_SENDER = "no-reply@skyfreightoman@gmail.com"
+export const EMAIL_SENDER_NAME = PUBLIC_SITENAME
+
 // Utils
 export const MAX_FILE_SIZE_UPLOAD = 10 * 1024 * 1024; // 5 MB
 export const MAX_LOGO_SIZE_UPLOAD = 500 * 1024; // 100 KB
