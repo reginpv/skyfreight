@@ -4,7 +4,8 @@ import FormLogin from "@/components/forms/FormLogin"
 import ButtonGoogle from "@/components/ButtonGoogle"
 import { getServerSession, Session } from "next-auth"
 import { authOptions } from "@/lib/authOptions"
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation"
+import Link from "next/link"
 
 export default async function Login() {
 
@@ -35,6 +36,22 @@ export default async function Login() {
                   </div>
                   <FormLogin />
                 </div>
+              </div>
+
+              {/** Links */}
+              <div className="text-center flex flex-col gap-3 text-body text-opacity-70">
+
+                <p>
+                  <Link href="/signup" className="underline">Register a FREE account</Link>
+                </p>
+
+                <p>
+                  <Link href="/password-reset" className="underline">Forgot password</Link>
+                </p>
+
+                <p>
+                  <Link href="/" className="underline">Go back to home page</Link>
+                </p>
               </div>
               
             </div>

@@ -1,7 +1,8 @@
 import TemplateBlank from "@/components/templates/Blank"
 import Logo from "@/components/ui/Logo"
-import FormLogin from "@/components/forms/FormLogin"
 import ButtonGoogle from "@/components/ButtonGoogle"
+import Link from "next/link"
+import FormSignup from "@/components/forms/FormSignup"
 
 export default function Signup() {
   return (
@@ -17,15 +18,28 @@ export default function Signup() {
                   <Logo />
                 </div>
                 <div className="flex justify-center uppercase font-bold">
-                  <h2>Login</h2>
+                  <h2>Register a free account</h2>
                 </div>
                 <div className="flex flex-col gap-3">
                   <ButtonGoogle />
                   <div className="text-center text-divider">
                     <span>or</span>
                   </div>
-                  <FormLogin />
+                  <FormSignup />
                 </div>
+              </div>
+
+              {/** Links */}
+              <div className="text-center flex flex-col gap-3 text-body text-opacity-70">
+
+                <p>
+                  Already have an account? <Link href="/login" className="underline">Click here to login</Link>
+                </p>
+
+                <p>
+                  <Link href="/" className="underline">Go back to home page</Link>
+                </p>
+
               </div>
               
             </div>
