@@ -12,10 +12,6 @@
     "slug": "/boc-forms"
   },
   {
-    "label": "Account",
-    "slug": "/account"
-  },
-  {
     "label": "Cart",
     "slug": "/cart"
   }

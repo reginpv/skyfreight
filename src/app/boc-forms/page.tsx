@@ -11,5 +11,5 @@ export default function BOCForms() {
         </div>
       </section>
     </TemplateDefault>
-  );
+  )
 }

@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./styles/base";
-@import "./styles/components";
-@import "./styles/utilities";
+@import "@/styles/base";
+@import "@/styles/components";
+@import "@/styles/utilities";
 
 :root {
   --background: #ffffff;
