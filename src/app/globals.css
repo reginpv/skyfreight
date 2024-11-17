@@ -21,3 +21,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   @apply min-h-[100dvh] flex flex-col;
 }
+
+body {
+  @apply text-["#555555"];
+}
+
+header {
+  @apply md:py-5;
+}
+
+h1, .h1 {
+  @apply text-[24px] leading-none font-bold;
+}
+
+footer {
+  @apply py-5;
+}
+
+form {
+  @apply text-body;
+  input,
+  textarea,
+  select {
+    @apply p-3 w-full ring-0 outline-none border;
+  }
+}

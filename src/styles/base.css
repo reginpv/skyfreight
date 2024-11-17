@@ -8,20 +8,4 @@
     @apply text-["#555555"];
   }
 
-  header {
-    @apply md:py-5;
-  }
-
-  footer {
-    @apply py-5;
-  }
-
-  form {
-    @apply text-body;
-    input,
-    textarea,
-    select {
-      @apply p-3 w-full ring-0 outline-none border;
-    }
-  }
 }

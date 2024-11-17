@@ -8,4 +8,9 @@
       @apply px-5 max-w-screen-xl;
     }
   }
+  .content {
+    p {
+      @apply mb-2;
+    }
+  }
 }
