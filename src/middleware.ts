@@ -8,6 +8,8 @@ export async function middleware(req: NextRequest) {
 
   const { pathname } = req.nextUrl
 
+  console.log('pathname: ',pathname)
+
   // Check for restricted paths
   if (pathname.startsWith('/admin') || pathname.startsWith('/account') || pathname.startsWith('/app')) {
     // Ensure the user has a valid token
