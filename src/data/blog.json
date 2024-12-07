@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding the Basics of Freight Forwarding",
+    "date_posted": "2024-12-01",
+    "content": "Freight forwarding is an essential part of the global supply chain. In this post, we break down the basics of freight forwarding, explaining the roles of freight forwarders and how they help businesses move goods internationally.",
+    "slug": "understanding-the-basics-of-freight-forwarding"
+  },
+  {
+    "id": 2,
+    "title": "Top Trends in Freight Forwarding for 2024",
+    "date_posted": "2024-12-02",
+    "content": "The freight forwarding industry is rapidly evolving. This article highlights the top trends shaping the future of freight forwarding, including the use of technology for real-time tracking and the shift toward more sustainable shipping practices.",
+    "slug": "top-trends-in-freight-forwarding-for-2024"
+  },
+  {
+    "id": 3,
+    "title": "How to Choose the Right Freight Forwarder for Your Business",
+    "date_posted": "2024-12-03",
+    "content": "Selecting the right freight forwarder is crucial for ensuring the smooth transport of your goods. We explore key factors to consider when choosing a freight forwarding partner, including reliability, cost, and expertise in international shipping.",
+    "slug": "how-to-choose-the-right-freight-forwarder-for-your-business"
+  },
+  {
+    "id": 4,
+    "title": "The Role of Technology in Modern Freight Forwarding",
+    "date_posted": "2024-12-05",
+    "content": "From digital platforms to advanced tracking systems, technology is revolutionizing freight forwarding. This article explores how freight forwarders are leveraging technology to streamline processes, reduce costs, and enhance customer service.",
+    "slug": "the-role-of-technology-in-modern-freight-forwarding"
+  },
+  {
+    "id": 5,
+    "title": "Common Challenges in Freight Forwarding and How to Overcome Them",
+    "date_posted": "2024-12-06",
+    "content": "Freight forwarding comes with its challenges, such as customs clearance issues, delays, and fluctuating shipping rates. In this post, we discuss common obstacles faced by businesses and offer solutions to overcome them for a smoother shipping experience.",
+    "slug": "common-challenges-in-freight-forwarding-and-how-to-overcome-them"
+  }
+]

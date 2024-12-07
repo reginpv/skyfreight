@@ -24,6 +24,12 @@ header {
 }
 
 h1, .h1 {
+  @apply text-[28px] leading-none font-bold;
+}
+h2, .h2 {
+  @apply text-[26px] leading-none font-bold;
+}
+h3, .h3 {
   @apply text-[24px] leading-none font-bold;
 }
 
