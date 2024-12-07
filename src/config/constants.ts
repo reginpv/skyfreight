@@ -16,3 +16,8 @@ export const EMAIL_SENDER_NAME = PUBLIC_SITENAME
 // Utils
 export const MAX_FILE_SIZE_UPLOAD = 10 * 1024 * 1024; // 5 MB
 export const MAX_LOGO_SIZE_UPLOAD = 500 * 1024; // 100 KB
+
+export const SUPER_ADMINS = [
+  "reginpv@gmail.com",
+  "jayskyfreight@gmail.com"
+]

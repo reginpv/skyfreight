@@ -1,3 +1,5 @@
+import { SUPER_ADMINS } from "@/config/constants";
+
 /**
  * 
  * @param num 
@@ -190,15 +192,25 @@ export function extractLatLongFromURL(url:string) {
   return []
 }
 
+/**
+ * 
+ */
+export function isCustomer(role: string) {
+
+  const admins = ['1']
+
+  return admins.includes(role)
+
+}
 
 /**
  * 
  * @param role
  * @returns 
  */
-export function isAdmin(role:number) {
+export function isAdmin(role: string) {
 
-  const admins = [9]
+  const admins = ['8', '9']
 
   return admins.includes(role)
 
@@ -207,14 +219,11 @@ export function isAdmin(role:number) {
 /**
  * 
  */
-export function isSuperadmin(email:string) {
+export function isSuperadmin(role: string) {
 
-  const superadmins = [
-    'reginpv@gmail.com',
-    'jayskyfreight@gmail.com'
-  ]
+  const superadmins = ['9']
 
-  return superadmins.includes(email)
+  return superadmins.includes(role)
 
 }
 
@@ -243,20 +252,6 @@ export function isBase64(str:string) {
   }
 }
 
-/**
- * 
- * 
- */
-export function blobToBase64(blob: Blob, callback: (base64String: string) => void): void {
-  const reader = new FileReader()
-  reader.onloadend = function () {
-    if (typeof reader.result === 'string') {
-      const base64String = reader.result
-      callback(base64String)
-    }
-  };
-  reader.readAsDataURL(blob)
-}
 
 /**
  * 
@@ -279,149 +274,3 @@ export function generateUUID() {
   return uuid;
 }
 
-/**
- * 
- * 
- */
-export async function urlToBase64(url:string) {
-
-  //console.log('running urlToBase64', `${url}?=${new Date().toISOString()}`)
-
-  if(!url || url === undefined) return
-
-  const res = await fetch(`${url}?=${new Date().toISOString()}`, {
-    cache: "no-store"
-  })
-  const d = await res.blob()
-
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-    
-    reader.onloadend = function () {
-      if (typeof reader.result === 'string') {
-        const base64String = reader.result
-        resolve(base64String)
-      } else {
-        reject(new Error("Failed to convert blob to base64"))
-      }
-    }
-
-    reader.onerror = function() {
-      reject(new Error("Error reading the blob"))
-    }
-
-    reader.readAsDataURL(d)
-
-  })
-
-}
-
-/**
- * 
- * 
- */
-export async function handleUrlToBase64(url:string) {
-  const res = await urlToBase64(url)
-  return res
-}
-
-/**
- * 
- * 
- */
-export function generateQrcodeContent(qrcode: any){
-
-  const { type } = qrcode
-  let content
-
-  // Mecard only
-  if(type==='mecard') {
-
-    // Can't destructure this
-    const fname = qrcode.mecard?.fname
-    const lname = qrcode.mecard?.lname
-    const mobile = qrcode.mecard?.mobile
-    const email = qrcode.mecard?.email
-
-    // Update data content
-    content = `MECARD:N:${fname} ${lname};TEL:${mobile};EMAIL:${email};;`
-    
-  }
-
-  // URL only
-  if(type==='url') {
-
-    // Can't destructure this
-    const url = qrcode.url?.url
-
-    // Update data content
-    content = `${url}`
-    
-  }
-
-  // Waze only
-  if(type==='waze') {
-
-    // Can't destructure this
-    const wazeurl = qrcode.waze?.wazeurl
-
-    // Update data content
-    content = `${wazeurl}`
-      
-  }
-
-  // Wifi only
-  if(type==='wifi') {
-
-    // Can't destructure this
-    const ssid = qrcode.wifi?.ssid
-    const pass = qrcode.wifi?.pass 
-    const security = qrcode.wifi?.security
-
-    content = `WIFI:S:${ssid};T:${security};P:${pass};;`
-      
-  }
-
-  // Event only
-  if(type==='event') {
-
-    // Can't destructure this
-    const name = qrcode.event?.name 
-    const location = qrcode.event?.location
-    const start = qrcode.event?.start
-    const end = qrcode.event?.end 
-    const description = qrcode.event?.description
-
-    // Update data content
-    const vcalendarStart = formatDateToVCalendar(new Date(start))
-    const vcalendarEnd = formatDateToVCalendar(new Date(end))
-
-    content = `BEGIN:VCALENDAR\nVERSION:2.0\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\nBEGIN:VEVENT\nDTSTART:${vcalendarStart}\nDTEND:${vcalendarEnd}\nLOCATION:${location}\nSUMMARY:${name}\nDESCRIPTION:${description?.replace(/\n/g, ' ')}\nEND:VEVENT\nEND:VCALENDAR`
-
-  }
-
-  // Whatsapp
-  if(type==='whatsapp') {
-
-    // Can't destructure this
-    const phone = qrcode.whatsapp?.phone
-    const country = qrcode.whatsapp?.country
-
-    // Update data content
-    content = `https://wa.me/${country}${phone}`
-
-  }
-
-  // File only
-  if(type==='file') {
-
-    // Can't destructure this
-    const { file } = qrcode.file
-
-    // Update data content
-    content = `${file}`
-    
-  }
-
-  return content
-}
