@@ -1,6 +1,7 @@
 "use client"
 
 import data from "@/data/blog.json"
+import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
@@ -44,14 +45,14 @@ export default function BlogSlider() {
                 {
                   data.map((b, i)=>(
                     <SwiperSlide key={i} className="!h-auto">
-                      <div className="flex h-full flex-col gap-3 ~p-[10px]/[20px] border rounded-2xl overflow-hidden bg-white">
+                      <Link href={`/blog/${b.slug}`} className="flex h-full flex-col gap-3 ~p-[10px]/[20px] border rounded-2xl overflow-hidden bg-white">
                         <div className="slide-content font-semibold">
                           {b.title}
                         </div>
                         <div>
                           {b.content}
                         </div>
-                      </div>
+                      </Link>
                     </SwiperSlide>
                   ))
                 }

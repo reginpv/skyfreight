@@ -17,7 +17,6 @@
     "@prisma/client": "^5.22.0",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
-    "lodash.debounce": "^4.0.8",
     "next": "^14.2.15",
     "next-auth": "^4.24.10",
     "nodemailer": "^6.9.16",

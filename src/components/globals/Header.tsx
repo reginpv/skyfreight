@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import debounce from "lodash.debounce"
 import Link from "next/link"
 import { useSession } from "next-auth/react"
 import Nav from "@/components/globals/Nav"
@@ -17,8 +16,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = debounce(() => {
-      setScrolled(window.scrollY > 50)
-    }, 100) // Adjust delay as needed (e.g., 100ms)
+      setScrolled(window.scrollY > 10)
+    }, 50) // Adjust delay as needed (e.g., 100ms)
 
     window.addEventListener("scroll", handleScroll)
 
@@ -27,8 +26,18 @@ export default function Header() {
     }
   }, [])
 
+  function debounce<T extends (...args: any[]) => void>(func: T, delay: number): (...args: Parameters<T>) => void {
+    let timeout: ReturnType<typeof setTimeout>
+  
+    return (...args: Parameters<T>) => {
+      clearTimeout(timeout)
+      timeout = setTimeout(() => func(...args), delay)
+    }
+  }
+  
+
   return (
-    <header className={`animated sticky top-0 bg-white z-30`}>
+    <header className={`animated sticky top-0 z-30 bg-white ${scrolled && `py-0 shadow-md bg-white`}`}>
       <div className="header__container">
         <div className="header__content flex justify-between gap-5 items-center">
 
