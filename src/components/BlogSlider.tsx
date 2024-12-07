@@ -10,7 +10,7 @@ export default function BlogSlider() {
   return (
     <section className="blog-slider ~py-[30px]/[60px] bg-gray-100">
       <div className="blog-container container container--custom">
-        <div className="blog-content flex flex-col ~gap-[12px]/[24px]">
+        <div className="blog-content flex flex-col ~gap-[24px]/[48px]">
 
           <div>
             <h2>News and Updates</h2>
