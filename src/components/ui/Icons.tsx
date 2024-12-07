@@ -8,6 +8,9 @@ interface IconProps {
 export function Icon({ icon, className, width, height }: IconProps) {
 
   const icons: Record<string, JSX.Element> = {
+    airplane:(
+      <svg className={className} width={width ?? 24} height={height ?? 24} viewBox="0 0 25 25"><title>Shopping Cart</title><path id="Shopping_Cart" data-name="Shopping Cart" d="M24.71,5.49a1.24,1.24,0,0,0-1-.47L6.4,5,5.63,1.93A1.25,1.25,0,0,0,4.42,1H0V2H4.42a.25.25,0,0,1,.24.18L8.37,17.07A1.25,1.25,0,0,0,9.58,18h12a1.23,1.23,0,0,0,1.22-1L25,6.55A1.24,1.24,0,0,0,24.71,5.49ZM13,21a2,2,0,1,1-2-2A2,2,0,0,1,13,21Zm9,0a2,2,0,1,1-2-2A2,2,0,0,1,22,21Z"></path></svg>
+    ),
     arrowRight:(
       <svg className={className} width={width ?? 24} height={height ?? 24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"/>
