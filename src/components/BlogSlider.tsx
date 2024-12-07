@@ -20,9 +20,26 @@ export default function BlogSlider() {
             <div className="blog-swiper-container">
               <Swiper
                 spaceBetween={30} 
-                slidesPerView={4}
+                slidesPerView={1}
                 loop={true}
-                pagination={{ clickable: true }} // Enable pagination
+                pagination={{ clickable: true }}
+                breakpoints={{
+                  // when the viewport is >= 320px
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  // when the viewport is >= 640px
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  // when the viewport is >= 1024px
+                  1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                  },
+                }}
               >
                 {
                   data.map((b, i)=>(
