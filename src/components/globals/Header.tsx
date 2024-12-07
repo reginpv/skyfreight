@@ -1,17 +1,34 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import debounce from "lodash.debounce"
 import Link from "next/link"
-import { getServerSession, Session } from "next-auth"
-import { authOptions } from "@/lib/authOptions"
+import { useSession } from "next-auth/react"
 import Nav from "@/components/globals/Nav"
 import LogoFull from "@/components/ui/LogoFull"
 import { ButtonSignOut } from "@/components/ui/ButtonsAuth"
 import { Icon } from "@/components/ui/Icons"
 
-export default async function Header() {
+export default function Header() {
 
-  const session = await getServerSession(authOptions) as Session | null
+  const { data: session, status }:any = useSession()
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = debounce(() => {
+      setScrolled(window.scrollY > 50)
+    }, 100) // Adjust delay as needed (e.g., 100ms)
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
-    <header className="animated">
+    <header className={`animated sticky top-0 bg-white z-30`}>
       <div className="header__container">
         <div className="header__content flex justify-between gap-5 items-center">
 
