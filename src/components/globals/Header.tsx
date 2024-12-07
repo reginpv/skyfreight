@@ -15,7 +15,7 @@ export default function Header() {
 
   const [scrolled, setScrolled] = useState(false)
 
-  const { drawer, setDrawer } = useGlobal((state:any) => state)
+  const { setDrawer } = useGlobal((state:any) => state)
 
   useEffect(() => {
     const handleScroll = debounce(() => {

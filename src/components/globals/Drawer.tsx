@@ -24,7 +24,7 @@ export default function Drawer() {
 
   return (
     <section data-ui="drawer" className={`bg-white fixed min-h-[100dvh] top-0 right-0 z-50 border border-l transition-all ease-in-out duration-300 ${drawer ? `w-full` : `w-0`}`}>
-      <div className="border-b h-[94.5px] px-page flex items-center justify-end p-5 sticky top-0 z-10 bg-white">
+      <div className="border-b h-[94.5px] md:h-[134.5px] px-page flex items-center justify-end p-5 sticky top-0 z-10 bg-white">
         <button onClick={()=>setDrawer(false)}>
           <Image src="/images/icon-close.png" alt="close" width="32" height="32" />
         </button>
