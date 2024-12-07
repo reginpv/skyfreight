@@ -24,6 +24,9 @@ export function Icon({ icon, className, width, height }: IconProps) {
       c8.7-11.5,20.6-19.3,41.1-19.3c33.4,0,47.4,4.8,47.4,4.8l-6.6,39.2c0,0-11-3.2-21.3-3.2c-10.3,0-19.5,3.7-19.5,14v29.9H169.5z"/>
       </svg>
     ),
+    menu: (
+      <svg className={className} width={width ?? 24} height={height ?? 24} viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    ),
     pin: (
       <svg className={className} version="1.1" width={width ?? 24} height={height ?? 24} id="Icons" viewBox="0 0 32 32">
         <path d="M16,3C10.5,3,6,7.5,6,13c0,8.4,9,15.5,9.4,15.8c0.2,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2C17,28.5,26,21.4,26,13

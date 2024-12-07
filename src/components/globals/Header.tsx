@@ -4,6 +4,7 @@ import { authOptions } from "@/lib/authOptions"
 import Nav from "@/components/globals/Nav"
 import LogoFull from "@/components/ui/LogoFull"
 import { ButtonSignOut } from "@/components/ui/ButtonsAuth"
+import { Icon } from "@/components/ui/Icons"
 
 export default async function Header() {
 
@@ -21,19 +22,23 @@ export default async function Header() {
           </div>
 
           {/** Right */}
-          <div className="hidden md:flex px-5 gap-7 items-center">
-            <Nav />
-
-            {
-              session ?
-                <ButtonSignOut /> :
-                <div className="flex gap-5 items-center">
-                  <Link href="/login" className="button button--primary">Login</Link>
-                  <Link href="/signup" className="button button--primary">Signup</Link>
-                </div>
-            }
-
+          <div className="flex items-center">
+            <div className="hidden md:flex px-5 gap-7 items-center">
+              <Nav />
+              {
+                session ?
+                  <ButtonSignOut /> :
+                  <div className="flex gap-5 items-center">
+                    <Link href="/login" className="button button--primary">Login</Link>
+                    <Link href="/signup" className="button button--primary">Signup</Link>
+                  </div>
+              }
+            </div>
+            <div className="flex md:hidden pr-5">test
+              <Icon icon="Menu" className="fill-primary" />
+            </div>
           </div>
+          
 
         </div>
       </div>

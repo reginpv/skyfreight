@@ -11,7 +11,6 @@ export default async function Home() {
       <section>
         <div className="container container--custom">
           <div>
-            <div>{JSON.stringify(session)}</div>
             <div>Home</div>
           </div>
         </div>
