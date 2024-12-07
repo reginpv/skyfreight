@@ -28,14 +28,14 @@ export default async function Header() {
               {
                 session ?
                   <ButtonSignOut /> :
-                  <div className="flex gap-5 items-center">
+                  <div className="gap-5 items-center hidden lg:flex">
                     <Link href="/login" className="button button--primary">Login</Link>
                     <Link href="/signup" className="button button--primary">Signup</Link>
                   </div>
               }
             </div>
-            <div className="flex md:hidden pr-5">test
-              <Icon icon="Menu" className="fill-primary" />
+            <div className="flex lg:hidden pr-5">
+              <Icon icon="menu" className="fill-primary w-[32px] h-[32px]" />
             </div>
           </div>
           

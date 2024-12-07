@@ -1,7 +1,6 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { Icon } from "@/components/ui/Icons"
 import menuJson from "@/data/menu.json"
 
 export default function Nav() {
@@ -20,7 +19,7 @@ export default function Nav() {
               <li key={i}>
                 <a
                   href={item.slug}
-                  className={isActive ? "active font-semibold" : ""}
+                  className={`truncate whitespace-nowrap ${isActive ? "active font-semibold" : ""}`}
                 >
                   {item.label}
                 </a>

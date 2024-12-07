@@ -28,7 +28,7 @@ export function Icon({ icon, className, width, height }: IconProps) {
       </svg>
     ),
     menu: (
-      <svg className={className} width={width ?? 24} height={height ?? 24} viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg className={className} width={width ?? 24} height={height ?? 24} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 0h16v7H0V0zm2 2v3h12V2H2zM0 9h16v7H0V9zm2 2v3h12v-3H2z" fill-rule="evenodd"></path> </g></svg>
     ),
     pin: (
       <svg className={className} version="1.1" width={width ?? 24} height={height ?? 24} id="Icons" viewBox="0 0 32 32">
