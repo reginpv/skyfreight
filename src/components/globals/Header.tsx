@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import { useGlobal } from "@/store/useGlobal"
 import { useSession } from "next-auth/react"
 import Nav from "@/components/globals/Nav"
 import LogoFull from "@/components/ui/LogoFull"
@@ -12,7 +13,9 @@ export default function Header() {
 
   const { data: session, status }:any = useSession()
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
+
+  const { drawer, setDrawer } = useGlobal((state:any) => state)
 
   useEffect(() => {
     const handleScroll = debounce(() => {
@@ -34,7 +37,6 @@ export default function Header() {
       timeout = setTimeout(() => func(...args), delay)
     }
   }
-  
 
   return (
     <header className={`animated sticky top-0 z-30 bg-white ${scrolled && `py-0 shadow-md bg-white`}`}>
@@ -61,7 +63,9 @@ export default function Header() {
               }
             </div>
             <div className="flex lg:hidden pr-5">
-              <Icon icon="menu" className="fill-primary w-[32px] h-[32px]" />
+              <button aria-label="Menu" onClick={()=>setDrawer(true)}>
+                <Icon data-ui="hamb" icon="menu" className="fill-primary w-[32px] h-[32px]" />
+              </button>
             </div>
           </div>
           
