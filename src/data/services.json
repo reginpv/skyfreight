@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Sea Cargo",
+    "category": "sea"
+  },
+  {
+    "id": "2",
+    "name": "Air Cargo",
+    "category": "air"
+  },
+  {
+    "id": "3",
+    "name": "Box",
+    "category": "box"
+  }
+]
