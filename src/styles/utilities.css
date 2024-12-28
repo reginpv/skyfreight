@@ -8,7 +8,7 @@
   }
 
   .button {
-    @apply px-3 py-3 leading-none;
+    @apply px-3 py-3 leading-none inline-flex;
     &--md {
       @apply px-4 py-4;
     }

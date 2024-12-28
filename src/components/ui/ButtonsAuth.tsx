@@ -1,16 +1,19 @@
-'use client'
+"use client"
 
-import { signIn, signOut } from 'next-auth/react'
+import { signIn, signOut } from "next-auth/react"
 
-export function ButtonSignIn() {
-  return <button onClick={() => signIn()}>Login</button> 
+export function ButtonSignIn({
+  className
+}:{
+  className?: string
+}) {
+  return <button className={className} onClick={() => signIn()}>Login</button> 
 }
 
-export function ButtonSignOut() {
-  return <button onClick={() => {
-
-    // Logout sess
-    signOut()
-
-  }}>Logout</button>
+export function ButtonSignOut({
+  className
+}:{
+  className?: string
+}) {
+  return <button className={className} onClick={() => signOut()}>Logout</button>
 }

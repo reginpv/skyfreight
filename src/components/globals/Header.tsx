@@ -8,6 +8,8 @@ import Nav from "@/components/globals/Nav"
 import LogoFull from "@/components/ui/LogoFull"
 import { ButtonSignOut } from "@/components/ui/ButtonsAuth"
 import { Icon } from "@/components/ui/Icons"
+import DrawerProfile from "../DrawerProfile"
+import { ButtonSignIn } from "@/components/ui/ButtonsAuth"
 
 export default function Header() {
 
@@ -41,7 +43,7 @@ export default function Header() {
   return (
     <header className={`animated sticky top-0 z-30 bg-white ${scrolled && `py-0 shadow-md bg-white`}`}>
       <div className="header__container">
-        <div className="header__content flex justify-between gap-5 items-center">
+        <div className="header__content flex items-center justify-between gap-5 items-center">
 
           {/** Left */}
           <div className="py-2 px-5 relative flex items-center">
@@ -50,23 +52,33 @@ export default function Header() {
           </div>
 
           {/** Right */}
-          <div className="flex items-center">
-            <div className="hidden md:flex px-5 gap-7 items-center">
+          <div className="flex items-center ~gap-[20px]/[40px] pr-5">
+
+            <div className="hidden md:flex gap-7 items-center">
               <Nav />
+            </div>
+            
+            <div className="hidden">
               {
-                session ?
-                  <ButtonSignOut /> :
-                  <div className="gap-5 items-center hidden lg:flex">
-                    <Link href="/login" className="button button--primary">Login</Link>
-                    <Link href="/signup" className="button button--primary">Signup</Link>
+                session && session.user ?
+                  <DrawerProfile /> :
+                  <div className="flex ~gap-[20px]/[40px] items-center">
+                    <div>
+                      <ButtonSignIn className="text-primary" />
+                    </div>
+                    <div>
+                      <Link href="/signup" className="button button--primary">Register</Link>
+                    </div>
                   </div>
               }
             </div>
-            <div className="flex lg:hidden pr-5">
-              <button aria-label="Menu" onClick={()=>setDrawer(true)}>
-                <Icon data-ui="hamb" icon="menu" className="fill-primary w-[32px] h-[32px]" />
+            {/** Hamb */}
+            <div className="flex items-center">
+              <button onClick={()=>setDrawer(!!true)}>
+                <Icon icon="menu" className="fill-primary" />
               </button>
             </div>
+
           </div>
           
 

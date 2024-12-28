@@ -1,6 +1,6 @@
 import TemplateBlank from "@/components/templates/Blank"
 import Logo from "@/components/ui/Logo"
-import ButtonGoogle from "@/components/ButtonGoogle"
+import ButtonGoogle from "@/components/ui/ButtonGoogle"
 import Link from "next/link"
 import FormSignup from "@/components/forms/FormSignup"
 import { Metadata } from "next"
@@ -23,8 +23,8 @@ export default function Signup() {
                 <div className="flex justify-center">
                   <Logo />
                 </div>
-                <div className="flex justify-center uppercase font-bold">
-                  <h2>Register a free account</h2>
+                <div className="flex justify-center font-bold">
+                  <h1 className="text-[18px]">Register a free account</h1>
                 </div>
                 <div className="flex flex-col gap-3">
                   <ButtonGoogle />

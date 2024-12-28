@@ -27,7 +27,7 @@ export default async function PasswordReset() {
         <div className="">
           <Logo />
         </div>
-        <h1 className="font-outfit text-[1.4rem] uppercase font-[800] text-black">Password reset</h1>
+        <h1 className="font-outfit text-[1.4rem] uppercase font-[800]">Password reset</h1>
         <Card className="max-w-md flex-none w-full">
           <div>
             <p className="mb-0">Enter your email address below and we'll send you password reset instructions.</p>

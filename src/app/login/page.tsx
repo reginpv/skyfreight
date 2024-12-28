@@ -1,7 +1,7 @@
 import TemplateBlank from "@/components/templates/Blank"
 import Logo from "@/components/ui/Logo"
 import FormLogin from "@/components/forms/FormLogin"
-import ButtonGoogle from "@/components/ButtonGoogle"
+import ButtonGoogle from "@/components/ui/ButtonGoogle"
 import { getServerSession, Session } from "next-auth"
 import { authOptions } from "@/lib/authOptions"
 import { redirect } from "next/navigation"
@@ -32,8 +32,8 @@ export default async function Login() {
                 <div className="flex justify-center">
                   <Logo />
                 </div>
-                <div className="flex justify-center uppercase font-bold">
-                  <h2>Login</h2>
+                <div className="flex justify-center font-bold">
+                  <h1 className="text-[18px]">Login</h1>
                 </div>
                 <div className="flex flex-col gap-3">
                   <ButtonGoogle />
