@@ -52,7 +52,9 @@ export default function Signup() {
 
             <div className="flex-1 bg-primary hidden md:flex text-white items-center justify-center h-auto">
               <div className="p-10 text-[1.2em] space-y-5">
-                [CONTENT]
+                <div className="max-w-[320px] text-[22px]">
+                  <p>Built exclusively for our kababayans who want to send cargo to the Philippines in a fast and safe way through our company.</p>
+                </div>
               </div>
             </div>
 

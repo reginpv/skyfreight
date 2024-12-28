@@ -58,7 +58,7 @@ export default function Header() {
               <Nav />
             </div>
             
-            <div className="hidden">
+            <div className="hidden md:flex">
               {
                 session && session.user ?
                   <DrawerProfile /> :
@@ -72,8 +72,9 @@ export default function Header() {
                   </div>
               }
             </div>
+
             {/** Hamb */}
-            <div className="flex items-center">
+            <div className="flex md:hidden items-center">
               <button onClick={()=>setDrawer(!!true)}>
                 <Icon icon="menu" className="fill-primary" />
               </button>
