@@ -9,11 +9,13 @@ export const metadata: Metadata = {
 export default async function DashboardSettingsSecurity() {
   
   return (
-    <section className="py-page">
-      <div className="mb-5 md:mb-8">
-        <h1>Password and security</h1>
+    <section className="~py-[30px]/[60px]">
+      <div className="container container--custom">
+        <div className="mb-5 md:mb-8">
+          <h1>Password and security</h1>
+        </div>
+        <FormSecurity /> 
       </div>
-      <FormSecurity /> 
     </section>
   )
 }

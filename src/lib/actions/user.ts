@@ -7,7 +7,6 @@ import { getServerSession, Session } from "next-auth"
 import { authOptions } from "@/lib/authOptions"
 import { isValidEmail } from "@/lib/helper"
 
-
 // UPDATE
 export async function updateUser(formData: FormData) { 
 
@@ -96,8 +95,7 @@ export async function updateUser(formData: FormData) {
         user: {
           id: user.id,
           name: user.name,
-          email: user.email,
-          timezone: timezone
+          email: user.email
         }
       }
 

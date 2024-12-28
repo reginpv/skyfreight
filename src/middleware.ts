@@ -8,12 +8,8 @@ export async function middleware(req: NextRequest) {
 
   const { pathname } = req.nextUrl
 
-  // console.log('pathname: ',pathname)
-
-  console.log('TOKEN: ', token)
-
   // Check for restricted paths
-  if (pathname.startsWith('/admin') || pathname.startsWith('/account') || pathname.startsWith('/app')) {
+  if (pathname.startsWith('/admin') || pathname.startsWith('/user') || pathname.startsWith('/app')) {
     // Ensure the user has a valid token
     if (!token) {
       return NextResponse.redirect(new URL('/login', req.url))
@@ -32,7 +28,7 @@ export async function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     '/admin/:path*',
-    '/account/:path*',
+    '/user/:path*',
     '/app/:path*' // Add api routes here?
   ],
 }

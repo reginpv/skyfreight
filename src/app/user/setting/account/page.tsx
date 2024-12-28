@@ -8,14 +8,12 @@ export const metadata: Metadata = {
 
 export default function Account() {
   return (
-    <TemplateDefault>
-      <section>
-        <div className="container container--custom">
-          <div>
-            Coming soon...
-          </div>
+    <section className="~py-[30px]/[60px]">
+      <div className="container container--custom">
+        <div>
+          Coming soon...
         </div>
-      </section>
-    </TemplateDefault>
+      </div>
+    </section>
   )
 }
