@@ -3,6 +3,12 @@ import Logo from "@/components/ui/Logo"
 import ButtonGoogle from "@/components/ButtonGoogle"
 import Link from "next/link"
 import FormSignup from "@/components/forms/FormSignup"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Signup",
+  description: "Signup",
+}
 
 export default function Signup() {
   return (

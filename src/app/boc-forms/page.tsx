@@ -1,4 +1,10 @@
 import TemplateDefault from "@/components/templates/Default"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "BOC Forms",
+  description: "BOC forms",
+}
 
 export default function BOCForms() {
   return (

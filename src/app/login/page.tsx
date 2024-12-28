@@ -6,6 +6,12 @@ import { getServerSession, Session } from "next-auth"
 import { authOptions } from "@/lib/authOptions"
 import { redirect } from "next/navigation"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Login",
+  description: "Login",
+}
 
 export default async function Login() {
 

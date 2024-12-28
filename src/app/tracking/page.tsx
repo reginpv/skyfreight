@@ -1,4 +1,11 @@
 import TemplateDefault from "@/components/templates/Default"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tracking",
+  description: `Tracking`,
+}
+
 
 export default function Home() {
   return (

@@ -1,4 +1,10 @@
 import TemplateDefault from "@/components/templates/Default"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Services",
+}
 
 export default function Services() {
   return (
