@@ -3,6 +3,7 @@ import localFont from "next/font/local"
 import { Providers } from "./providers"
 import HydrationZustand from "@/components/templates/hydrationZustand"
 import "./globals.css"
+import TemplateDefault from "@/components/templates/Default"
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
