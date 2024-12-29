@@ -43,7 +43,7 @@ export default function Header() {
   return (
     <header className={`animated sticky top-0 z-30 bg-white ${scrolled && `py-0 shadow-md bg-white`}`}>
       <div className="header__container">
-        <div className="header__content flex items-center justify-between gap-5 items-center">
+        <div className="header__content flex items-center justify-between gap-5">
 
           {/** Left */}
           <div className="py-2 px-5 relative flex items-center">

@@ -15,7 +15,7 @@ export default async function UserSettingProfile() {
   const { user } = session
 
   return (
-    <section className="flex flex-col gap-5 ~py-[30px]/[60px]">
+    <section className="flex flex-col gap-5 page">
 
       <div className="container container--custom flex flex-col gap-5">
 

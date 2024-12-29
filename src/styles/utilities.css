@@ -42,7 +42,7 @@
   }
 
   .page {
-    @apply ~py-[30px]/[60px];
+    @apply ~pt-[15px]/[30px] ~pb-[40px]/[80px];
   }
 
 }
