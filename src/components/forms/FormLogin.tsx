@@ -89,7 +89,7 @@ function FormLoginContent() {
       <div>
         <button
           type="submit"
-          className="button button--default button--md w-full"
+          className="button button--primary button--md w-full"
           disabled={loading}
         >
           {loading ? "loading..." : "Login"}

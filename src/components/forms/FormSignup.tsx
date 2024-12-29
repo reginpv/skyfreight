@@ -108,13 +108,16 @@ export default function FormSignup() {
         />
       </div>
       <p className="mb-6 small text-sm">By creating an account, you agree to our <a href="/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="underline">privacy policy</a>.</p>
-      <button
-        type="submit"
-        className="bg-[#ccc] py-3 px-5 w-full hover:bg-[#ddd] transition-all ease-in-out duration-200 disabled:opacity-50 disabled:hover:bg-[#ccc] disabled:cursor-not-allowed"
-        disabled={loading}
-      >
-        {loading ? "loading..." : "Signup"}
-      </button>
+
+      <div>
+        <button
+          type="submit"
+          className="button button--primary button--md w-full"
+          disabled={loading}
+        >
+          {loading ? "loading..." : "Signup"}
+        </button>
+      </div>
 
     </form>
   )

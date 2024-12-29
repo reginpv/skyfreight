@@ -8,7 +8,7 @@ export default function ButtonGoogle() {
     <button
       
       onClick={() => signIn("google")}
-      className="button font-semibold py-2 border flex items-center gap-2 justify-center"
+      className="button font-semibold py-2 border flex items-center gap-2 justify-center rounded-md"
     >
       <Image src="/images/logo-google.svg" height={24} width={24} alt="Login via Google" />
       <span>Sign in with Google</span>

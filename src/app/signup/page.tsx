@@ -1,15 +1,24 @@
 import Logo from "@/components/ui/Logo"
+import { getServerSession, Session } from "next-auth"
 import ButtonGoogle from "@/components/ui/ButtonGoogle"
 import Link from "next/link"
 import FormSignup from "@/components/forms/FormSignup"
 import { Metadata } from "next"
+import { authOptions } from "@/lib/authOptions"
+import { redirect } from "next/navigation"
 
 export const metadata: Metadata = {
   title: "Signup",
   description: "Signup",
 }
 
-export default function Signup() {
+export default async function Signup() {
+
+  const session = await getServerSession(authOptions) as Session | null
+  if(session) {
+    redirect('/')
+  }
+
   return (
     <section className="h-dvh">
 
@@ -17,7 +26,7 @@ export default function Signup() {
 
           <div className="flex-1 flex flex-col items-center justify-center p-10 gap-10 bg-gray-100">
 
-            <div className="border p-5 flex flex-col gap-5 bg-white max-w-md w-full">
+            <div className="border p-5 flex flex-col gap-5 bg-white max-w-md w-full rounded-xl">
               <div className="flex justify-center">
                 <Logo />
               </div>

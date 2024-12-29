@@ -9,7 +9,7 @@
   }
 
   .button {
-    @apply px-3 py-3 leading-none justify-center inline-flex items-center animated;
+    @apply px-3 py-3 leading-none justify-center inline-flex items-center animated rounded-md disabled:cursor-not-allowed disabled:animate-pulse;
     &--md {
       @apply px-4 py-4;
     }

@@ -26,7 +26,7 @@ export default async function Login() {
 
           <div className="flex-1 flex flex-col items-center justify-center p-10 gap-10 bg-gray-100">
 
-            <div className="border p-5 flex flex-col gap-5 bg-white max-w-md w-full">
+            <div className="border p-5 flex flex-col gap-5 bg-white max-w-md w-full rounded-xl">
               <div className="flex justify-center">
                 <Logo />
               </div>

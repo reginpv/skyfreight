@@ -42,6 +42,6 @@ form {
   input,
   textarea,
   select {
-    @apply p-3 w-full ring-0 outline-none border;
+    @apply p-3 w-full ring-0 outline-none border rounded-md;
   }
 }
