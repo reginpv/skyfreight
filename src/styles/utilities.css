@@ -9,7 +9,7 @@
   }
 
   .button {
-    @apply px-3 py-3 leading-none justify-center inline-flex items-center;
+    @apply px-3 py-3 leading-none justify-center inline-flex items-center animated;
     &--md {
       @apply px-4 py-4;
     }
@@ -21,6 +21,12 @@
     }
     &--secondary {
       @apply bg-secondary text-white hover:bg-blend-lighten;
+    }
+    &--danger {
+      @apply bg-red-300 border border-red-500 text-red-700;
+      &:hover {
+        @apply bg-red-500 text-white;
+      }
     }
   }
 

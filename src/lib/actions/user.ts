@@ -17,7 +17,6 @@ export async function updateUser(formData: FormData) {
   const password = formData.get("password")?.toString().trim()
   const passwordConfirm = formData.get("passwordConfirm")?.toString().trim()
   const security = formData.get("security")?.toString().trim()
-  const timezone = formData.get("timezone")?.toString().trim()
 
   const errors: string[] = []
 

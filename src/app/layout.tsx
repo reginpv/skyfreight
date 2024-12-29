@@ -3,7 +3,6 @@ import localFont from "next/font/local"
 import { Providers } from "./providers"
 import HydrationZustand from "@/components/templates/hydrationZustand"
 import "./globals.css"
-import TemplateDefault from "@/components/templates/Default"
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -28,6 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
+      {/** HEAD */}
+      <head>
+
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[1920px] mx-auto`}
       >

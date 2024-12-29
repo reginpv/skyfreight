@@ -8,8 +8,7 @@ declare global {
     name?: stringnumber,
     email?: stringnumber,
     image?: stringnumber,
-    role?: stringnumber,
-    timezone?: string
+    role?: stringnumber
   }
 
   interface Props {
