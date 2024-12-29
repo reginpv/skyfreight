@@ -59,16 +59,18 @@ export default function Header() {
             
             <div className="hidden md:flex">
               {
-                session && session.user ?
-                  <DrawerProfile /> :
-                  <div className="flex ~gap-[20px]/[40px] items-center">
-                    <div>
-                      <ButtonSignIn className="text-primary" />
-                    </div>
-                    <div>
-                      <Link href="/signup" className="button button--primary">Register</Link>
-                    </div>
-                  </div>
+                status === "loading" ? 
+                  <div className="h-[30px] w-[30px]"></div> :
+                    session && session.user ?
+                      <DrawerProfile /> :
+                      <div className="flex ~gap-[20px]/[40px] items-center">
+                        <div>
+                          <ButtonSignIn className="text-primary" />
+                        </div>
+                        <div>
+                          <Link href="/signup" className="button button--primary">Register</Link>
+                        </div>
+                      </div>
               }
             </div>
 

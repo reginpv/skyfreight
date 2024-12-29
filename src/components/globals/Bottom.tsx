@@ -1,9 +1,9 @@
-import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_TELEPHONE_OMAN, PUBLIC_TELEPHONE_PH } from "@/config/constants"
 import Link from "next/link"
 import { Icon } from "@/components/ui/Icons"
 import menujson from "@/data/menu.json"
 import FormNewsletter from "@/components/forms/FormNewsletter"
 import LogoFull from "@/components/ui/LogoFull"
+import { PUBLIC_ADDRESS, PUBLIC_EMAIL, PUBLIC_SM_FACEBOOK, PUBLIC_SM_TIKTOK, PUBLIC_SM_WHATSAPP, PUBLIC_TELEPHONE_OMAN, PUBLIC_TELEPHONE_PH } from "@/config/constants"
 
 export default function Bottom() {
   return (
@@ -108,17 +108,17 @@ export default function Bottom() {
                 <div className="">
                   <ul className="flex justify-center items-center ~gap-[20px]/[40px]">
                     <li>
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href={PUBLIC_SM_FACEBOOK} target="_blank" rel="noopener noreferrer">
                         <Icon icon="facebook" height={40} width={40} className="fill-secondary" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href={PUBLIC_SM_WHATSAPP} target="_blank" rel="noopener noreferrer">
                         <Icon icon="whatsapp" height={40} width={40} className="fill-secondary" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href={PUBLIC_SM_TIKTOK} target="_blank" rel="noopener noreferrer">
                         <Icon icon="tiktok" height={40} width={40} className="fill-secondary" />
                       </a>
                     </li>
