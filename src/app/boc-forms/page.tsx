@@ -7,11 +7,19 @@ export const metadata: Metadata = {
 
 export default function BOCForms() {
   return (
-    <section>
+    <section className="page">
       <div className="container container--custom">
-        <div>
-          Coming soon...
+
+        <div className="flex flex-col gap-5">
+          <div>
+            <h1>BOC Forms</h1>
+          </div>
+
+          <div>
+            <p>Coming soon...</p>
+          </div>
         </div>
+        
       </div>
     </section>
   )
