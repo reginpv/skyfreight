@@ -13,4 +13,14 @@
       @apply mb-2;
     }
   }
+  .banner-home {
+    .banner-home__top {
+      background-image: url("../images/home-banner-bg.png");
+      background-size: cover;
+      background-position: right;
+    }
+    .banner-home__bottom {
+      clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
 }
