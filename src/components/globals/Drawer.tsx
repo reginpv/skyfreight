@@ -15,7 +15,7 @@ export default function Drawer() {
   const pathname = usePathname()
 
   if (status === 'loading') {
-    return (<section data-ui="drawer" className={`bg-white fixed min-h-[100dvh] top-0 right-0 z-50 border border-l transition-all ease-in-out duration-300 p-5 items-center justify-center ${drawer ? `w-full` : `w-0`}`}>Loading please wait...</section>)
+    return null
   } 
 
   return (
