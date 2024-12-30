@@ -51,7 +51,6 @@ export default function Blog({
     <section className="page">
       <div className="container container--custom">
         
-
         <div className="flex flex-col gap-7">
 
           <div className="flex justify-end">

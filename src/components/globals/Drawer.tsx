@@ -6,6 +6,7 @@ import { useGlobal } from "@/store/useGlobal"
 import menuJson from "@/data/menu.json"
 import ButtonGoogle from "../ui/ButtonGoogle"
 import ButtonCloseDrawer from "../ui/ButtonCloseDrawer"
+import Link from "next/link"
 
 export default function Drawer() {
 
@@ -14,7 +15,7 @@ export default function Drawer() {
   const pathname = usePathname()
 
   if (status === 'loading') {
-    return (<section data-ui="drawer" className={`bg-white fixed min-h-[100dvh] top-0 right-0 z-50 border border-l transition-all ease-in-out duration-300 ${drawer ? `w-full` : `w-0`}`}>Loading please wait...</section>)
+    return (<section data-ui="drawer" className={`bg-white fixed min-h-[100dvh] top-0 right-0 z-50 border border-l transition-all ease-in-out duration-300 p-5 items-center justify-center ${drawer ? `w-full` : `w-0`}`}>Loading please wait...</section>)
   } 
 
   return (
@@ -51,19 +52,42 @@ export default function Drawer() {
 
             return (
               <li key={i}>
-                <a
+                <Link
                   href={item.slug}
                   className={`text-[18px] border-b py-4 px-5 w-full flex truncate whitespace-nowrap ${isActive ? "active font-semibold" : ""}`}
+                  onClick={()=>setDrawer(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             )
 
           })}
+          <li>
+            <Link 
+              href="/user/setting/account"
+              className={`text-[18px] border-b py-4 px-5 w-full flex truncate whitespace-nowrap`}
+              onClick={()=>setDrawer(false)}
+            >Account</Link>
+          </li>
+          <li>
+            <Link 
+              href="/user/setting/profile"
+              className={`text-[18px] border-b py-4 px-5 w-full flex truncate whitespace-nowrap`}
+              onClick={()=>setDrawer(false)}
+            >Profile</Link>
+          </li>
+          <li>
+            <Link 
+              href="/user/setting/security"
+              className={`text-[18px] border-b py-4 px-5 w-full flex truncate whitespace-nowrap`}
+              onClick={()=>setDrawer(false)}
+            >Security</Link>
+          </li>
         </ul>
 
         {/** Socials */}
+
 
       </nav>
     </section>
