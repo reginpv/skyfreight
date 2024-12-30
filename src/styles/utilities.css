@@ -9,18 +9,33 @@
   }
 
   .button {
-    @apply px-3 py-3 leading-none justify-center inline-flex items-center animated rounded-md disabled:cursor-not-allowed disabled:animate-pulse;
+    @apply px-3 py-3 leading-none justify-center inline-flex items-center animated rounded-md disabled:cursor-not-allowed disabled:animate-pulse truncate overflow-hidden;
     &--md {
       @apply px-4 py-4;
     }
     &--default {
       @apply bg-gray-100;
+      &:hover {
+        @apply bg-gray-50;
+      }
     }
     &--primary {
       @apply bg-primary text-white hover:bg-blend-lighten;
     }
     &--secondary {
       @apply bg-secondary text-white hover:bg-blend-lighten;
+    }
+    &--white {
+      @apply bg-white border border-secondary text-primary;
+      &:hover {
+        @apply bg-secondary text-white border-primary;
+      }
+    }
+    &--outlined {
+      @apply border-[3px] rounded-full border-sky-300 bg-transparent;
+      &:hover {
+        @apply border-white;
+      }
     }
     &--danger {
       @apply bg-red-300 border border-red-500 text-red-700;

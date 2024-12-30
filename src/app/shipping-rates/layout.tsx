@@ -3,8 +3,8 @@ import { ReactNode } from "react"
 import TemplateDefault from "@/components/templates/Default"
 
 export const metadata: Metadata = {
-  title: "Tracking",
-  description: "Tracking"
+  title: "Login",
+  description: "Login"
 }
 
 export default function BlankLayout({

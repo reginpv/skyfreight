@@ -11,9 +11,12 @@
   --foreground: #171717;
 }
 
-/* * {
-  outline: 1px red solid;
-} */
+.outlined {
+  outline: 1px rgba(255, 0, 0, 0.1) solid;
+  * {
+    outline: 1px rgba(255, 0, 0, 0.1) solid;
+  }
+}
 
 body {
   @apply text-body min-h-[100dvh] flex flex-col;
