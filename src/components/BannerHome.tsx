@@ -1,10 +1,11 @@
+"use client"
+
 import Link from "next/link"
 import { Icon } from "@/components/ui/Icons"
-import Image from "next/image"
+import BannerHomeTopLeft from "@/components/BannerHomeTopLeft"
+import BannerHomeTopRight from "./BannerHomeTopRight"
 
-export default function BannerHome() {
-
-  const headerTopOffsetClass = ``
+export default function BannerHome({ isVisible }) {
 
   return (
     <section className="banner-home">
@@ -20,30 +21,13 @@ export default function BannerHome() {
 
                 {/** Top left */}
                 <div className="flex-1 hidden lg:block">
-                  <div className="bg-primary absolute aspect-[1/1] w-[500px] rounded-tr-[100px] -rotate-[9deg] -ml-[30px] -mt-[20px]">
-                  </div>
-                  <Image src="/images/services-box.jpg" width={510} height={300} alt="box" className="absolute bottom-[50px] -rotate-[4deg] border-l-2 rounded-tr-[100px] border-t-[5px] border-r-[5px] border-secondary -ml-[60px]" />
+                  <BannerHomeTopLeft />
                 </div>
+
 
                 {/** Top right */}
                 <div className="flex-1 flex flex-col gap-7">
-
-                  <div>
-                    <h1 className="uppercase font-bold">
-                      <span className="~text-[40px]/[60px] text-primary">We handle it</span><br />
-                      <span className="~text-[50px]/[70px] text-secondary">better</span>
-                    </h1>
-                  </div>
-
-                  <div className="flex flex-col md:flex-row gap-5">
-                    <div>
-                      <Link href="/tracking" className="button button--white md:button--md rounded-full uppercase font-semibold">Track your package</Link>
-                    </div>
-                    <div>
-                      <Link href="/shipping-rates" className="button button--white md:button--md rounded-full uppercase font-semibold">Shipping rates</Link>
-                    </div>
-                  </div>
-
+                  <BannerHomeTopRight />
                 </div>
 
               </div>
