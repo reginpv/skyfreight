@@ -14,5 +14,9 @@
   {
     "label": "Cart",
     "slug": "/cart"
+  },
+  {
+    "label": "Blog",
+    "slug": "/blog"
   }
 ]

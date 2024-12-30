@@ -4,16 +4,16 @@ import { useState } from "react"
 
 export default function FormNewsletter():JSX.Element {
 
-  const [ stateSending, setStateSending ] = useState(false)
+  const [ pending, setPending ] = useState(false)
   const [ stateFields, setStateFields ] = useState({
-    email: ''
+    email: ""
   })
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
     e.preventDefault()
 
-    setStateSending(false)
+    setPending(false)
 
   }
 
@@ -21,9 +21,9 @@ export default function FormNewsletter():JSX.Element {
     <form onSubmit={handleSubmit}>
       <div data-message="newsletter" className="mb-2 hidden py-2 px-3 text-left"></div>
       <div className="flex">
-        <input type="text" name="email" value={stateFields.email} onChange={e=>setStateFields({...stateFields, email: e.target.value})} className="input rounded-l-xl" placeholder="Email" />
-        <button className={`button button--secondary rounded-r-xl ${stateSending ? `animate-pulse`: ``}`} disabled={stateSending}>
-          {stateSending ? `Sending...` : `Subscribe`}
+        <input type="text" name="email" value={stateFields.email} onChange={e=>setStateFields({...stateFields, email: e.target.value})} className="input rounded-l-xl rounded-r-none" placeholder="Email" />
+        <button className={`button button--secondary rounded-r-xl rounded-l-none`} disabled={pending}>
+          {pending ? `Sending...` : `Subscribe`}
         </button>
       </div>
     </form>
