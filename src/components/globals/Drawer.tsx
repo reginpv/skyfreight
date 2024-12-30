@@ -1,13 +1,11 @@
 "use client"
 
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useSession } from "next-auth/react"
 import { useGlobal } from "@/store/useGlobal"
 import menuJson from "@/data/menu.json"
 import ButtonGoogle from "../ui/ButtonGoogle"
-import { ButtonSignIn } from "../ui/ButtonsAuth"
-
+import ButtonCloseDrawer from "../ui/ButtonCloseDrawer"
 
 export default function Drawer() {
 
@@ -16,7 +14,7 @@ export default function Drawer() {
   const pathname = usePathname()
 
   if (status === 'loading') {
-    return (<div className="animate-pulse p-5">...</div>)
+    return (<section data-ui="drawer" className={`bg-white fixed min-h-[100dvh] top-0 right-0 z-50 border border-l transition-all ease-in-out duration-300 ${drawer ? `w-full` : `w-0`}`}>Loading please wait...</section>)
   } 
 
   return (
@@ -35,9 +33,7 @@ export default function Drawer() {
             </>
           }
         </div>
-        <button onClick={()=>setDrawer(false)}>
-          <Image src="/images/icon-close.png" alt="close" width="32" height="32" />
-        </button>
+        <ButtonCloseDrawer />
       </div>
       
       {
