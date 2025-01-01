@@ -5,7 +5,7 @@ import { Icon } from "@/components/ui/Icons"
 import BannerHomeTopLeft from "@/components/BannerHomeTopLeft"
 import BannerHomeTopRight from "./BannerHomeTopRight"
 
-export default function BannerHome({ isVisible }) {
+export default function BannerHome() {
 
   return (
     <section className="banner-home">
