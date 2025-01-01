@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export default function BannerHomeTopRight() {
   return (
-    <div className="flex-1 flex flex-col gap-7">
+    <div className="flex-1 flex flex-col gap-7 justify-center">
       {/* Title Section */}
       <motion.div
         initial={{ opacity: 0 }}

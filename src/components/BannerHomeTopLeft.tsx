@@ -25,7 +25,7 @@ export default function BannerHomeTopLeft() {
           src="/images/services-box.jpg"
           width={510}
           height={300}
-          alt="box"
+          alt="Balikbayan box"
           className=""
         />
       </motion.div>

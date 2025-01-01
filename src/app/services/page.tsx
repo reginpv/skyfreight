@@ -1,21 +1,17 @@
-import TemplateDefault from "@/components/templates/Default"
-import { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "Services",
-  description: "Services",
-}
+import BannerInner from "@/components/BannerInner"
 
 export default function Services() {
   return (
-    <TemplateDefault>
-      <section>
+    <>
+      <BannerInner />
+
+      <section className="page">
         <div className="container container--custom">
           <div>
             Coming soon...
           </div>
         </div>
       </section>
-    </TemplateDefault>
-  );
+    </>
+  )
 }

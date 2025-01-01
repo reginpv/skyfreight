@@ -23,4 +23,19 @@
       clip-path: polygon(0 16%, 100% 0%, 100% 100%, 0% 100%);
     }
   }
+  .banner-inner {
+    .banner-inner__text {
+      transform: skew(12deg);
+      h1 {
+        transform: skew(-12deg);
+      }
+    }
+    .banner-inner__image {
+      transform: skewX(12deg);
+      overflow: hidden;
+      img {
+        transform: scale(1.2) skewX(-12deg);
+      }
+    }
+  }
 }

@@ -26,7 +26,7 @@ export default function BannerHome({ isVisible }) {
 
 
                 {/** Top right */}
-                <div className="flex-1 flex flex-col gap-7">
+                <div className="flex-1 flex flex-col gap-7 justify-center">
                   <BannerHomeTopRight />
                 </div>
 
