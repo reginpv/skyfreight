@@ -20,7 +20,16 @@
       }
     }
     &--primary {
-      @apply bg-primary text-white hover:bg-blend-lighten;
+      @apply bg-primary text-white hover:bg-blend-lighten border-[3px] border-primary;
+      &:hover {
+        @apply bg-white text-primary;
+      }
+    }
+    &--primary-inverted {
+      @apply bg-white text-primary hover:bg-blend-lighten border-[3px] border-primary;
+      &:hover {
+        @apply bg-primary text-white;
+      }
     }
     &--secondary {
       @apply bg-secondary text-white hover:bg-blend-lighten;

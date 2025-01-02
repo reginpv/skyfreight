@@ -63,12 +63,12 @@ export default function Header() {
                   <div className="h-[30px] w-[30px]"></div> :
                     session && session.user ?
                       <DrawerProfile /> :
-                      <div className="flex ~gap-[20px]/[40px] items-center">
+                      <div className="flex ~gap-[10px]/[20px] items-center">
                         <div>
-                          <ButtonSignIn className="text-primary" />
+                          <ButtonSignIn className="button button--primary-inverted px-5 rounded-full font-bold" />
                         </div>
                         <div>
-                          <Link href="/signup" className="button button--primary">Register</Link>
+                          <Link href="/signup" className="button button--primary rounded-full px-5 font-bold border-[3px] border-primary">Register</Link>
                         </div>
                       </div>
               }
