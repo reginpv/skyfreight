@@ -48,9 +48,9 @@ export default function DrawerProfile({
   }
 
   return (
-    <section data-component="drawer-mini" ref={drawerRef} onClick={() => setDrawerProfile(drawerProfile ? false : true)} className={`${className} relative rounded-full h-[42px] w-[42px] cursor-pointer border-2 border-transparent hover:border-gray-300 animated flex items-center justify-center text-white ${!session.user.image && `bg-black`}`}>
+    <section data-component="drawer-mini" ref={drawerRef} onClick={() => setDrawerProfile(drawerProfile ? false : true)} className={`${className} relative rounded-full cursor-pointer border-2 border-transparent hover:border-gray-300 animated flex items-center justify-center text-white ${!session.user.image && `bg-black`}`}>
       {session && session.user.image ? (
-        <img src={session.user.image} alt={session.user.name + ""} height={42} width={42} className="rounded-full" />
+        <img src={session.user.image} alt={session.user.name + ""} height={47} width={47} className="rounded-full border-primary border-[3px] aspect-[1/1] w-[47px] h-[47px]" />
       ) : (
         <span>{session.user.name.charAt(0)}</span>
       )}

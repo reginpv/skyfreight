@@ -26,7 +26,7 @@ export default function BannerHomeTopLeft() {
           width={510}
           height={300}
           alt="Balikbayan box"
-          className=""
+          className="hover:scale-105 animated"
         />
       </motion.div>
     </div>

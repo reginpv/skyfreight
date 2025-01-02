@@ -13,8 +13,9 @@ export default function BlogSlider() {
       <div className="blog-container container container--custom">
         <div className="blog-content flex flex-col ~gap-[24px]/[48px]">
 
-          <div>
-            <h2>News and Updates</h2>
+          <div className="flex items-center justify-between">
+            <h2 className="h3">News and Updates</h2>
+            <Link href="blog" className="button button--default bg-white">View more</Link>
           </div>
           
           <div>

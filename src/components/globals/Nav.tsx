@@ -19,7 +19,7 @@ export default function Nav() {
               <li key={i}>
                 <a
                   href={item.slug}
-                  className={`truncate whitespace-nowrap ${isActive ? "active font-semibold" : ""}`}
+                  className={`truncate whitespace-nowrap font-semibold ${isActive ? "active font-bold" : ""}`}
                 >
                   {item.label}
                 </a>
