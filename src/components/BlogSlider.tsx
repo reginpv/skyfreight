@@ -6,8 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import BlogCard from "./BlogCard"
+import { useState } from "react"
 
 export default function BlogSlider() {
+  // Store the swiper instance in state
+  const [swiperInstance, setSwiperInstance] = useState<any>(null)
+
   return (
     <section className="blog-slider ~py-[30px]/[60px] bg-gray-100">
       <div className="blog-container container container--custom">
@@ -21,22 +26,20 @@ export default function BlogSlider() {
           <div>
             <div className="blog-swiper-container">
               <Swiper
+                className="overflow-visible"
                 spaceBetween={30} 
                 slidesPerView={1}
                 loop={true}
-                pagination={{ clickable: true }}
+                onSwiper={(swiper) => setSwiperInstance(swiper)} // Store the swiper instance here
                 breakpoints={{
-                  // when the viewport is >= 320px
                   320: {
                     slidesPerView: 1,
                     spaceBetween: 10,
                   },
-                  // when the viewport is >= 640px
                   640: {
                     slidesPerView: 2,
                     spaceBetween: 20,
                   },
-                  // when the viewport is >= 1024px
                   1024: {
                     slidesPerView: 4,
                     spaceBetween: 30,
@@ -44,21 +47,26 @@ export default function BlogSlider() {
                 }}
               >
                 {
-                  data.map((b, i)=>(
+                  data.map((b, i) => (
                     <SwiperSlide key={i} className="!h-auto">
-                      <Link href={`/blog/${b.slug}`} className="flex h-full flex-col gap-3 ~p-[10px]/[20px] border rounded-2xl overflow-hidden bg-white">
-                        <div className="slide-content font-semibold">
-                          {b.title}
-                        </div>
-                        <div>
-                          {b.content}
-                        </div>
+                      <Link href={`/blog/${b.slug}`}>
+                        <BlogCard blog={b} />
                       </Link>
                     </SwiperSlide>
                   ))
                 }
               </Swiper>
             </div>
+
+            <div className="relative z-10 flex justify-end items-center gap-3 ml-auto mt-5">
+              <button className="p-3 aspect-square h-[42px] w-[42px] flex items-center justify-center leading-none bg-white rounded-full border-[3px]" onClick={()=>swiperInstance?.slidePrev()}>
+                &lt;
+              </button>
+              <button className="p-3 aspect-square h-[42px] w-[42px] flex items-center justify-center leading-none bg-white rounded-full border-[3px]" onClick={()=>swiperInstance?.slideNext()}>
+                &gt;
+              </button>
+            </div>
+
           </div>
 
         </div>
