@@ -1,3 +1,4 @@
+import BannerInnerExpanded from "@/components/BannerInnerExpanded"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -7,20 +8,11 @@ export const metadata: Metadata = {
 
 export default function BOCForms() {
   return (
-    <section className="page">
-      <div className="container container--custom">
-
-        <div className="flex flex-col gap-5">
-          <div>
-            <h1>BOC Forms</h1>
-          </div>
-
-          <div>
-            <p>Coming soon...</p>
-          </div>
-        </div>
-        
-      </div>
-    </section>
+    <>
+      <BannerInnerExpanded 
+        title="BOC <strong>forms</strong>"
+        content="Save time and download the Bureau of Customs (BOC) forms ahead!"
+      />
+    </>
   )
 }

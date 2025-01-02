@@ -29,12 +29,24 @@
       h1 {
         transform: skew(-12deg);
       }
+      * {
+        transform: skewX(-12deg);
+      }
     }
     .banner-inner__image {
       transform: skewX(12deg);
       overflow: hidden;
       img {
         transform: scale(1.2) skewX(-12deg);
+      }
+      
+    }
+  }
+  .banner-inner-expanded {
+    .banner-inner-expanded__right {
+      transform: skewX(12deg);
+      > * {
+        transform: skewX(-12deg);
       }
     }
   }
