@@ -12,6 +12,7 @@ export default function NotFound() {
   return (
     <TemplateBlank className="">
       <section className="flex flex-col items-center justify-center py-10 min-h-[100dvh]">
+        <p className="font-bold ~text-[60px]/[90px]">404</p>
         <h1 className="mb-10">Page not found</h1>
         <p>Could not find requested resource</p>
         <Link href="/" className="font-bold">Return Home</Link>

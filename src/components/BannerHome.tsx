@@ -54,7 +54,7 @@ export default function BannerHome() {
                   </Link>
                 </div>
                 <div className="mt-5">
-                  <Link href="/products">Learn More</Link>
+                  <Link href="/services">Learn More</Link>
                 </div>
               </div>
             </div>

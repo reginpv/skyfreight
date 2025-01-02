@@ -6,6 +6,7 @@ import { revalidatePath } from "next/cache"
 import { getServerSession, Session } from "next-auth"
 import { authOptions } from "@/lib/authOptions"
 import { isValidEmail } from "@/lib/helper"
+import { SUPERADMINS } from "@/config/constants"
 
 // UPDATE
 export async function updateUser(formData: FormData) { 
@@ -117,8 +118,8 @@ export async function deleteUser() {
 
   const errors: string[] = []
 
-  // Custom protect Gin's account
-  if(session.user.email === 'reginpv@gmail.com') errors.push("Can't delete a superadmin account.")
+  // Protected accounts
+  if(SUPERADMINS.includes(session.user.email)) errors.push("Can't delete a superadmin account.")
 
   // Server-Side Validation
   if (!userId) errors.push("You do not have authorization to delete this account.")

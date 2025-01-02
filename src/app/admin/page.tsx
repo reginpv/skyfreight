@@ -1,4 +1,3 @@
-import TemplateDefault from "@/components/templates/Default"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -8,14 +7,12 @@ export const metadata: Metadata = {
 
 export default function Admin() {
   return (
-    <TemplateDefault>
-      <section>
-        <div className="container container--custom">
-          <div>
-            Coming soon...
-          </div>
+    <section>
+      <div className="container container--custom">
+        <div>
+          Coming soon...
         </div>
-      </section>
-    </TemplateDefault>
+      </div>
+    </section>
   )
 }

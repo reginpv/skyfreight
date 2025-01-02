@@ -19,7 +19,9 @@ export const EMAIL_SENDER_NAME = PUBLIC_SITENAME
 export const MAX_FILE_SIZE_UPLOAD = 10 * 1024 * 1024; // 5 MB
 export const MAX_LOGO_SIZE_UPLOAD = 500 * 1024; // 100 KB
 
-export const SUPER_ADMINS = [
+// Protected accounts
+// Prortected accounts cant be deleted
+export const SUPERADMINS = [
   "reginpv@gmail.com",
   "jayskyfreight@gmail.com"
 ]
