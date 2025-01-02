@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react"
 import { useRouter } from "next/navigation"
-import { deleteUser } from "@/lib/actions/user"
+import { deleteUser } from "@/lib/actions/me/user"
 import { signOut } from "next-auth/react"
 
 export default function ButtonDeleteAccount() {

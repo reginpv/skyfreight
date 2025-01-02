@@ -1,7 +1,7 @@
 "use client"
 
 import { FormEvent, useState } from "react"
-import { updateUser } from "@/lib/actions/user"
+import { updateUser } from "@/lib/actions/me/user"
 
 export default function FormSecurity() {
 

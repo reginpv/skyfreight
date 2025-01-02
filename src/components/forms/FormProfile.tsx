@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react"
 import { useSession } from "next-auth/react"
-import { updateUser } from "@/lib/actions/user"
+import { updateUser } from "@/lib/actions/me/user"
 import { useRouter } from "next/navigation"
 
 export default function FormProfile({ editing }: {editing: any}) {
