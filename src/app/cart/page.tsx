@@ -12,7 +12,7 @@ export default function Cart() {
 
         <div className="flex flex-col gap-5">
           <div>
-            <h1>Cart</h1>
+            <h1 className="h2">Cart</h1>
           </div>
 
           <div>

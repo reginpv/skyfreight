@@ -20,7 +20,7 @@ export default async function UserSettingProfile() {
       <div className="container container--custom flex flex-col gap-5">
 
         <div className="flex justify-between items-center gap-10">
-          <h1>My profile</h1>
+          <h1 className="h2">My profile</h1>
         </div>
 
         <div>

@@ -12,7 +12,7 @@ export default async function DashboardSettingsSecurity() {
     <section className="~py-[30px]/[60px]">
       <div className="container container--custom">
         <div className="mb-5 md:mb-8">
-          <h1>Password and security</h1>
+          <h1 className="h2">Password and security</h1>
         </div>
         <FormSecurity /> 
       </div>

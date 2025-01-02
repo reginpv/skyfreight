@@ -20,7 +20,7 @@ export default async function Account() {
         <div className="flex flex-col gap-5">
 
           <div className="flex justify-between items-center gap-10">
-            <h1>Account</h1>
+            <h1 className="h2">Account</h1>
           </div>
           
           <div>

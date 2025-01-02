@@ -18,7 +18,7 @@ export default function Blog() {
 
         <div className="flex flex-col ~gap-[20px]/[40px] mt-7">
           <div>
-            <h1>Blog</h1>
+            <h1 className="h2">Blog</h1>
           </div>
 
           <div>
