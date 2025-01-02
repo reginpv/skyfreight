@@ -52,7 +52,7 @@ export default function DrawerProfile({
       {session && session.user.image ? (
         <img src={session.user.image} alt={session.user.name + ""} height={47} width={47} className="rounded-full border-primary border-[3px] aspect-[1/1] w-[47px] h-[47px]" />
       ) : (
-        <span>{session.user.name.charAt(0)}</span>
+        <span className="rounded-full aspect-[1/1] w-[47px] h-[47px] flex items-center justify-center font-bold text-2xl uppercase">{session.user.name.charAt(0)}</span>
       )}
 
       <div className={`absolute right-0 top-[calc(100%+10px)] text-b z-30 bg-white border w-[280px] rounded-lg ${drawerProfile ? `inline-block` : `hidden`}`}>
