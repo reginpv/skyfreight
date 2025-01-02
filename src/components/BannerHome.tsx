@@ -10,12 +10,12 @@ export default function BannerHome() {
   return (
     <section className="banner-home">
       <div className="banner-home__container">
-        <div className="banner-home__content bg-gray-200">
+        <div className="banner-home__content">
           
           <div>
 
             {/** Top */}
-            <div className="banner-home__top bg-gray-200 ~pt-[164px]/[200px] -mt-[134px] pb-[150px] lg:pb-[200px] -mb-[120px] relative">
+            <div className="banner-home__top ~pt-[164px]/[200px] -mt-[134px] pb-[150px] lg:pb-[200px] -mb-[120px] relative">
 
               <div className="container container--custom flex flex-col md:flex-row gap-10">
 

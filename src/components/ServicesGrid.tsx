@@ -26,7 +26,7 @@ export default function ServicesGrid() {
                   "url": "/services/add-on-services"
                 }
               ].map((service, i)=>(
-                <div key={i} className="rounded-xl border-[3px] border-primary flex flex-col">
+                <div key={i} className="rounded-xl border-[3px] border-primary flex flex-col bg-white">
                   <div className="flex-1 flex justify-center items-center py-5">
                     <div className="uppercase text-primary py-5 px-7 flex justify-center items-center font-bold text-2xl text-center">
                       {service.name}

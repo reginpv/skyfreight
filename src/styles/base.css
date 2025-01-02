@@ -5,7 +5,9 @@
 @layer base {
 
   body {
-    @apply text-["#555555"] bg-gray-200;
+    @apply text-["#555555"] bg-gray-200 bg-[url("/images/body-bg.png")] bg-cover w-full;
+    background-blend-mode: multiply;
+    background-position: -300px -200px;
   }
 
 }

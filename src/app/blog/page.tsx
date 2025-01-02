@@ -13,7 +13,7 @@ export default function Blog() {
   const blogs:any = dataBlog
   
   return (
-    <section className="page bg-gray-100">
+    <section className="page">
       <div className="container container--custom">
 
         <div className="flex flex-col ~gap-[20px]/[40px] mt-7">
