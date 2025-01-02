@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import { ReactNode } from "react"
-import TemplateDefault from "@/components/templates/Default"
+import TemplateDashboard from "@/components/templates/Dashboard"
 
 export const metadata: Metadata = {
   title: "Admin",
@@ -14,8 +14,8 @@ export default function BlankLayout({
 }) {
 
   return (
-    <TemplateDefault>
+    <TemplateDashboard>
       {children}
-    </TemplateDefault>
+    </TemplateDashboard>
   )
 }

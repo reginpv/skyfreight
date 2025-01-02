@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Dashboard",
+    "slug": "/admin"
+  },
+  {
+    "label": "Services",
+    "slug": "/admin/services",
+    "submenu": [
+      {
+        "label": "Add a service",
+        "slug": "/admin/services/add"
+      }
+    ]
+  },
+  {
+    "label": "Users",
+    "slug": "/admin/users",
+    "submenu": [
+      {
+        "label": "Add a user",
+        "slug": "/admin/users/add"
+      }
+    ]
+  }
+]
