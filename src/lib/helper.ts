@@ -1,5 +1,3 @@
-import { SUPER_ADMINS } from "@/config/constants";
-
 /**
  * 
  * @param num 
