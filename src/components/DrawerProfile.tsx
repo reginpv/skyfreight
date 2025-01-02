@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useSession } from "next-auth/react"
 import { ButtonSignOut } from "@/components/ui/ButtonsAuth"
 import { useEffect, useRef } from "react"
-import { isAdmin } from "@/lib/helper"
+import { isAdmin, isSuperadmin } from "@/lib/helper"
 
 export default function DrawerProfile({
   className
@@ -92,6 +92,13 @@ export default function DrawerProfile({
               <Link href="/admin" className="hover:bg-gray-200 p-2 hover:text-black rounded-lg animated block">Admin</Link>
             </li>
           }
+
+          {
+            isSuperadmin(session.user.role) && <li className="">
+              <Link href="/admin" className="hover:bg-gray-200 p-2 hover:text-black rounded-lg animated block">Admin</Link>
+            </li>
+          }
+
         </ul>
         <hr />
         <div className="p-5 text-gray-500 hover:text-black">
