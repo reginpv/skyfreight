@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default async function AdminUsers() {
 
   const user = await getUsers()
-  const users = user.users
+  const users = user.users || []
 
   return (
     <section className="bg-white">
@@ -27,14 +27,14 @@ export default async function AdminUsers() {
                 <div className="flex font-bold border-b [&_div]:border-r last:[&_div]:border-r-0 [&_div]:py-3 [&_div]:px-3">
                   <div className="~w-[40px]/[50px] flex justify-center">ID</div>
                   <div className="flex-1">Name (email)</div>
-                  <div className="w-[75px]">Orders</div>
+                  <div className="w-[75px] flex justify-center">Orders</div>
                 </div>
                 {
                   users.map((user, i)=>(
                     <div key={i} className="flex border-b last:border-b-0 [&_div]:border-r last:[&_div]:border-r-0 [&_div]:py-3 [&_div]:px-3">
                       <div className="~w-[40px]/[50px] flex justify-center">{user.id}</div>  
                       <div className="flex-1 break-all">{user.name} ({user.email})</div>
-                      <div className="w-[75px]">{user._count.orders}</div>
+                      <div className="w-[75px] flex justify-center">{user._count.orders}</div>
                     </div>
                   ))
                 }
