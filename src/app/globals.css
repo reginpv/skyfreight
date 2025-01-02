@@ -27,10 +27,10 @@ header {
 }
 
 h1, .h1 {
-  @apply text-[28px] leading-none font-bold;
+  @apply ~text-[30px]/[70px] leading-none font-bold;
 }
 h2, .h2 {
-  @apply text-[26px] leading-none font-bold;
+  @apply ~text-[26px]/[50px] leading-none font-bold;
 }
 h3, .h3 {
   @apply text-[24px] leading-none font-bold;
