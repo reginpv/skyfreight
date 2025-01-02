@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import CartDetails from "@/components/CartDetails"
 
 export const metadata: Metadata = {
   title: "Cart",
@@ -9,17 +10,7 @@ export default function Cart() {
   return (
     <section className="page">
       <div className="container container--custom">
-
-        <div className="flex flex-col gap-5">
-          <div>
-            <h1 className="h2">Cart</h1>
-          </div>
-
-          <div>
-            <p>Coming soon...</p>
-          </div>
-        </div>
-        
+        <CartDetails />
       </div>
     </section>
   )
