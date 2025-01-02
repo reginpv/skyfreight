@@ -6,7 +6,7 @@ import { useGlobal } from "@/store/useGlobal"
 import { useSession } from "next-auth/react"
 import Logo from "@/components/ui/Logo"
 import { Icon } from "@/components/ui/Icons"
-import DrawerProfile from "@/components/DrawerProfile"
+import DrawerProfileAdmin from "@/components/DrawerProfileAdmin"
 import { ButtonSignIn } from "@/components/ui/ButtonsAuth"
 
 export default function HeaderAdmin() {
@@ -50,12 +50,12 @@ export default function HeaderAdmin() {
           </div>
 
           {/** Right */}
-          <div className="flex items-center ~gap-[20px]/[40px] pr-5">
+          <div className="flex items-center ~gap-[15px]/[20px]">
 
             <div className="hidden md:flex gap-7 items-center">
               <ul className="flex items-center gap-5">
                 <li>
-                  <Link href="/" target="_blank">View Site</Link>
+                  <Link href="/">View Site</Link>
                 </li>
                 <li>
                   <Link href="/admin">Dashboard</Link>
@@ -68,7 +68,7 @@ export default function HeaderAdmin() {
                 status === "loading" ? 
                   <div className="h-[30px] w-[30px]"></div> :
                     session && session.user ?
-                      <DrawerProfile /> :
+                      <DrawerProfileAdmin /> :
                       <div className="flex ~gap-[10px]/[20px] items-center">
                         <div>
                           <ButtonSignIn className="button button--primary-inverted px-5 rounded-full font-bold" />
@@ -88,7 +88,6 @@ export default function HeaderAdmin() {
             </div>
 
           </div>
-          
 
         </div>
       </div>
