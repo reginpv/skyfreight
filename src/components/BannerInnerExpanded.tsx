@@ -31,7 +31,9 @@ export default function BannerInnerExpanded({
                 </div>
               </div>
               <div className="pr-5 md:pr-10">
-                <Image src="/images/form-qr-code.png" width={200} height={200} alt="Moving" className="aspect-[1/1] rounded-xl ~h-[100px]/[200px] ~w-[100px]/[200px] border-[3px] border-secondary" />
+                <a href="https://qrcodeph.com/pHy3Flzn" target="_blank" rel="noreferrer noopener">
+                  <Image src="/images/form-qr-code.png" width={200} height={200} alt="Moving" className="aspect-[1/1] rounded-xl min-w-[100px] ~h-[100px]/[200px] ~w-[100px]/[200px] border-[3px] border-secondary" />
+                </a>
               </div>
             </div>
           </div>
