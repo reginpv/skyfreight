@@ -2,6 +2,7 @@ import Header from "@/components/globals/Header"
 import Bottom from "@/components/globals/Bottom"
 import Footer from "@/components/globals/Footer"
 import Drawer from "@/components/globals/Drawer"
+import Whatsapp from "@/components/Whatsapp"
 
 export default function TemplateDefault({ children }: Props) {
   
@@ -12,6 +13,7 @@ export default function TemplateDefault({ children }: Props) {
       <Bottom />
       <Footer />
       <Drawer />
+      <Whatsapp />
     </>
   )
 }
